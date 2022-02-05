@@ -1,9 +1,7 @@
+import { Layout } from "./components/layout";
+
 function App() {
-  return (
-    <>
-      GDA
-    </>
-  );
+  return <Layout />;
 }
 
 export default App;
