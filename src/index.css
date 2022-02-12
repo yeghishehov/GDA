@@ -1,5 +1,6 @@
 html, body {
   height: 99%;
+  width: 99%;
 }
 body {
   margin: 0;
@@ -8,9 +9,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #292929;
-  padding-bottom: 0;
-  color: #D1D1D1; */
 }
 
 code {

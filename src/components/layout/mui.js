@@ -1,5 +1,9 @@
 import { styled } from "@mui/material/styles";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 
-export const SContainer = styled(Container)`
+export const ContainerSC = styled(Container)`
+`;
+
+export const ContentSC = styled(Box)`
+  
 `;

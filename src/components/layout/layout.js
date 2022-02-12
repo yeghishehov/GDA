@@ -1,10 +1,17 @@
-import { Header } from "../header/header";
-import { SContainer } from "./mui";
+import { Header } from "../header";
+import { ParticlesBackground } from "../particles";
+import { Description } from "../description";
+import { ContainerSC, ContentSC } from "./mui";
 
 export function Layout() {
   return (
-    <SContainer>
+    <ContainerSC>
+      <ParticlesBackground />
       <Header />
-    </SContainer>
+      <Description />
+      <ContentSC>
+        {/* opacity background for content */}
+      </ContentSC>
+    </ContainerSC>
   );
 }

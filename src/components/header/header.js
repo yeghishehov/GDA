@@ -1,22 +1,16 @@
 import GlitchClip from "react-glitch-effect/core/GlitchClip";
-import GlitchSquiggly from "react-glitch-effect/core/GlitchSquiggly";
-import {
-  BackgroundSC, BoxSC, TextBoxSC, TypographySC,
-} from "./mui";
+import { BoxSC, TextBoxSC, HeaderSC } from "./mui";
 
 export function Header() {
   return (
     <BoxSC>
-      <BackgroundSC />
       <GlitchClip duration={11000}>
         <GlitchClip duration={7000}>
-          <GlitchSquiggly baseFrequency={0.003} scaleNoise={4} duration={20000}>
-            <TextBoxSC>
-              <TypographySC>Game</TypographySC>
-              <TypographySC>Development</TypographySC>
-              <TypographySC>Academy</TypographySC>
-            </TextBoxSC>
-          </GlitchSquiggly>
+          <TextBoxSC>
+            <HeaderSC>Game</HeaderSC>
+            <HeaderSC>Development</HeaderSC>
+            <HeaderSC>Academy</HeaderSC>
+          </TextBoxSC>
         </GlitchClip>
       </GlitchClip>
     </BoxSC>
