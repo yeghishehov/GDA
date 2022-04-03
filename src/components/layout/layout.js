@@ -1,21 +1,229 @@
+/* eslint-disable max-len */
+import { useState } from "react";
+import {
+  Typography,
+  Modal,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
+
 import { Header } from "../header";
 import { ParticlesBackground } from "../particles";
 import { Description } from "../description";
-import { ContainerSC, ContentSC } from "./mui";
+import { Card } from "../card";
+import UELogo from "../../assets/images/UE_Logo1.png";
+import unityLogo from "../../assets/images/unity.png";
+import winImg from "../../assets/images/win.jpg";
+import img1 from "../../assets/images/1.jfif";
+
+import {
+  ContainerSC,
+  ContentSC,
+  CoursesSC,
+  ButtonSC,
+  NavigationSC,
+  Image,
+  BGImage,
+  Gradient,
+  Gradient2,
+  CourseModal,
+} from "./mui";
+
+const coursesTitle = "Lesson classes";
+const courses = "Choosing the game engine is one of the first steps of starting development.";
+
+const coursesDetailsTitle = "Courses overview";
+
+const pricesTitle = "Course prices";
+const pricesSubTitle = "Beginner course duration is 3 months";
+const price = "69.000 AMD, 59.000 AMD, 49.000 AMD, 29.000 AMD";
+
+const aboutTitle = "What is Game Development";
+const about = `Game developers design, create and produce video games. They work in game development teams with artists, programmers, producers and marketing staff.
+Game developers usually specialize in a particular game platform (PlayStation, Xbox, Mobile (IOS or Android), PC for example) and a particular aspect of game development, such as programming artificial intelligence or game play. Specialization is common in the industry, although games developers sometimes perform a combination of roles.`;
+const about2Title = "Our mission";
+const about2 = `The company's missionl is to establish the first qualified educational institution in Armenia, where Armenian youth
+will be able to study creating high quality video games for Mobile/Desktop and Console platforms.
+We are eager to lead students, spread the famous Armenian creator's
+reputation all over the world also in game development, and open the new opportunities for our homeland.`;
+
+const buttons = ["about", "our mission", "courses", "registration", "faq"];
 
 export function Layout() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const smoothScroll = (e) => {
+    const element = document.getElementById(e.target.name);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <ContainerSC>
       <ParticlesBackground />
       <Header />
       <Description />
-      <ContentSC>
-        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et mollis diam. Proin quis placerat tortor, quis pharetra eros. Sed eu placerat nulla. Vestibulum feugiat dapibus tellus in placerat. Etiam ullamcorper ante et mattis laoreet. Donec iaculis, mi nec condimentum sodales, nisl dolor elementum ligula, vel laoreet libero metus ut metus. Aliquam sed vehicula mi. Nullam eget mauris pretium, venenatis enim et, viverra augue. In gravida sodales mauris, viverra luctus metus ultricies eu. Pellentesque eget arcu at risus euismod mattis. Mauris tempor pulvinar scelerisque. Pellentesque nec rhoncus augue. Cras ut aliquam quam. Pellentesque fermentum enim et felis volutpat, in porta ante mattis. Suspendisse malesuada nisi sapien. Quisque tellus urna, eleifend id ligula eget, bibendum auctor leo.
-        Suspendisse suscipit lobortis orci, vitae suscipit lacus imperdiet ac. Aenean sed auctor turpis. Donec non congue lectus. Duis sollicitudin, metus in fermentum ultrices, magna ipsum porta augue, eu aliquam enim velit vel tellus. Ut imperdiet augue ut risus fermentum aliquam. Duis in nulla tincidunt, pellentesque dui vel, ultrices eros. Morbi a velit id nisi rutrum aliquam. Proin ultricies aliquet consequat. Vestibulum bibendum ornare lectus vitae auctor. Vestibulum ultricies condimentum eleifend. Pellentesque ullamcorper vel lectus varius mollis. Nulla facilisi. Vivamus vitae vestibulum nisi, at finibus purus. Vestibulum euismod, nisl eu auctor dignissim, ante odio pharetra erat, id egestas massa massa a mauris. Duis at eleifend justo, eget mollis dolor. Fusce imperdiet auctor tortor, sed condimentum enim convallis in.
-        Sed suscipit convallis felis. Nam ultricies nec massa nec pellentesque. Integer congue pellentesque ullamcorper. Praesent eu augue ex. In porta vel nisl sit amet maximus. Aliquam ut metus posuere, mollis risus non, aliquet libero. Fusce aliquam metus non laoreet bibendum. Nunc elementum euismod erat, dictum lobortis orci dapibus sed.
-        Vestibulum volutpat, mi sed laoreet aliquam, dolor velit porttitor odio, quis pulvinar mauris ipsum a eros. Aenean congue laoreet eros id rhoncus. Aenean facilisis faucibus massa eu semper. Vivamus maximus lorem nisi, eu finibus enim ultricies eget. Vestibulum volutpat mauris id nisi dignissim elementum. Quisque porta eu dolor pharetra dictum. Proin vestibulum sodales odio at imperdiet. Fusce pulvinar sagittis sem id rutrum.
-        Proin volutpat augue vitae sagittis molestie. Cras pretium placerat lacus, molestie sodales massa semper a. Maecenas molestie tellus vel ligula dignissim ullamcorper. Fusce sodales, dolor nec fermentum interdum, diam augue interdum lorem, sollicitudin pellentesque risus quam eu nisl. Ut fringilla diam odio, maximus fringilla velit consectetur at. Aenean sit amet nunc eget quam lacinia luctus. Integer neque nulla, dignissim quis hendrerit in, vestibulum ac enim. Praesent sit amet ipsum nulla. Integer sed ultrices lectus, a cursus nisi. Sed accumsan non magna at maximus. Proin nec leo condimentum, tempor est consequat, venenatis mi. Nulla ut viverra massa, at vestibulum felis. Vivamus libero sapien, congue in egestas et, maximus in tellus.`}
+      <NavigationSC>
+        {buttons.map((button) => (
+          <ButtonSC
+            key={button}
+            variant="outlined"
+            size="large"
+            name={button}
+            onClick={smoothScroll}
+          >
+            {button}
+          </ButtonSC>
+        ))}
+      </NavigationSC>
+      <ContentSC id="about">
+        <Typography
+          variant="h2"
+          align="center"
+          mb={5}
+          fontFamily="Brutal-Regular"
+        >
+          {aboutTitle}
+        </Typography>
+        <Typography variant="h5" align="center" fontFamily="Brutal-Regular">
+          {about}
+        </Typography>
+        <Image src={winImg} />
       </ContentSC>
+      <ContentSC id="our mission" overflow="hidden">
+        <Typography
+          variant="h2"
+          align="center"
+          mb={5}
+          fontFamily="Brutal-Regular"
+          color="#FEFEFE"
+          zIndex="1"
+        >
+          {about2Title}
+        </Typography>
+        <Typography
+          variant="h5"
+          align="center"
+          fontFamily="Brutal-Regular"
+          color="#FEFEFE"
+          zIndex="1"
+        >
+          {about2}
+        </Typography>
+        <BGImage src={img1} />
+        <Gradient />
+        <Gradient2 />
+      </ContentSC>
+      <ContentSC id="courses">
+        <Typography
+          variant="h2"
+          align="center"
+          mb={5}
+          fontFamily="Brutal-Regular"
+        >
+          {coursesTitle}
+        </Typography>
+        <Typography variant="h5" align="center" fontFamily="Brutal-Regular">
+          {courses}
+        </Typography>
+        <CoursesSC>
+          <Card
+            logo={UELogo}
+            title="Unreal Engine"
+            gradient="to right, #7b91db, #7a4eda"
+            onClick={handleOpen}
+          />
+          <Card
+            logo={unityLogo}
+            title="Unity 3D"
+            content="coming soon"
+            gradient="to right, #814fd3, #ac50ce"
+          />
+        </CoursesSC>
+      </ContentSC>
+      <ContentSC id="prices">
+        <Typography
+          variant="h2"
+          align="center"
+          mb={5}
+          fontFamily="Brutal-Regular"
+        >
+          {pricesTitle}
+        </Typography>
+        <Typography variant="h4" align="center" fontFamily="Brutal-Regular">
+          {pricesSubTitle}
+        </Typography>
+        <Typography variant="h5" align="center" fontFamily="Brutal-Regular">
+          {price}
+        </Typography>
+      </ContentSC>
+      <ContentSC id="registration">
+        <Typography
+          variant="h2"
+          align="center"
+          mb={5}
+          fontFamily="Brutal-Regular"
+        >
+          registration
+        </Typography>
+      </ContentSC>
+      <ContentSC id="faq">
+        <Accordion>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Accordion 1</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel2a-content"
+            id="panel2a-header"
+          >
+            <Typography>Accordion 2</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion disabled>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel3a-content"
+            id="panel3a-header"
+          >
+            <Typography>Disabled Accordion</Typography>
+          </AccordionSummary>
+        </Accordion>
+      </ContentSC>
+      <Modal open={open} onClose={handleClose}>
+        <CourseModal>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            {coursesDetailsTitle}
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
+        </CourseModal>
+      </Modal>
     </ContainerSC>
   );
 }

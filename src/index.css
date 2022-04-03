@@ -9,9 +9,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #DBDEE3;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: "AzonixRegular";
+  src: local("AzonixRegular"),
+  url("./assets/fonts/AzonixRegular.ttf") format("truetype"),
+  url("./assets/fonts/AzonixRegular.woff2") format("woff2"),
+  url("./assets/fonts/AzonixRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Brutal-Regular";
+  src: local("Brutal-Regular"),
+  url("./assets/fonts/Brutal-Regular.ttf") format("truetype"),
+  url("./assets/fonts/Brutal-Regular.woff2") format("woff2"),
+  url("./assets/fonts/Brutal-Regular.woff") format("woff");
 }
