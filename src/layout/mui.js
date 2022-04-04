@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 import {
-  Container, Box, Button,
+  Container, Box, Button, Divider,
 } from "@mui/material";
 
 export const ContainerSC = styled(Container)`
@@ -60,6 +60,8 @@ export const BGImage = styled("img")`
   position: absolute;
   top: 200vh;
   right: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
   z-index: -1;
 `;
@@ -84,6 +86,16 @@ export const Gradient2 = styled("div")`
     z-index: -1;
 `;
 
+export const Gradient3 = styled("div")`
+    background: #1A1A32;
+    position: absolute;
+    top: 412vh;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+`;
+
 export const CourseModal = styled(Box)`
     position: absolute;
     top: 50%;
@@ -93,4 +105,31 @@ export const CourseModal = styled(Box)`
     height: 60%;
     border-radius: 20px;
     background: #f5f1f7;
+`;
+
+export const DividerContainerSC = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+`;
+
+export const DividerSC = styled(Divider)`
+  border-color: #fff;
+  border-bottom-width: unset;
+  width: 36%;
+`;
+
+export const Price = styled("div")`
+  width: 300px;
+  margin: 20px;
+  position: relative;
+  background: #9862ca;
+  background: linear-gradient(to right, #9862ca, #517cd1);
+  padding: 20px;
+  border-radius: 20px 20px 0 20px;
+  transition: .2s;
+  &:hover {
+    box-shadow: 0 0 15px 5px #7171ce79;
+  }
 `;

@@ -8,14 +8,15 @@ import {
   AccordionDetails,
 } from "@mui/material";
 
-import { Header } from "../header";
-import { ParticlesBackground } from "../particles";
-import { Description } from "../description";
-import { Card } from "../card";
-import UELogo from "../../assets/images/UE_Logo1.png";
-import unityLogo from "../../assets/images/unity.png";
-import winImg from "../../assets/images/win.jpg";
-import img1 from "../../assets/images/1.jfif";
+import { Header } from "../components/header";
+import { ParticlesBackground } from "../components/particles";
+import { Description } from "../components/description";
+import { Card } from "../components/card";
+import UELogo from "../assets/images/UE_Logo1.png";
+import unityLogo from "../assets/images/unity.png";
+import winImg from "../assets/images/win.jpg";
+import img1 from "../assets/images/1.jfif";
+import times from "../assets/images/times.png";
 
 import {
   ContainerSC,
@@ -27,7 +28,11 @@ import {
   BGImage,
   Gradient,
   Gradient2,
+  Gradient3,
   CourseModal,
+  DividerSC,
+  DividerContainerSC,
+  Price,
 } from "./mui";
 
 const coursesTitle = "Lesson classes";
@@ -35,9 +40,9 @@ const courses = "Choosing the game engine is one of the first steps of starting 
 
 const coursesDetailsTitle = "Courses overview";
 
-const pricesTitle = "Course prices";
+const pricesTitle = "Conditions of education";
 const pricesSubTitle = "Beginner course duration is 3 months";
-const price = "69.000 AMD, 59.000 AMD, 49.000 AMD, 29.000 AMD";
+// const price = "69.000 AMD, 59.000 AMD, 49.000 AMD, 29.000 AMD";
 
 const aboutTitle = "What is Game Development";
 const about = `Game developers design, create and produce video games. They work in game development teams with artists, programmers, producers and marketing staff.
@@ -48,7 +53,14 @@ will be able to study creating high quality video games for Mobile/Desktop and C
 We are eager to lead students, spread the famous Armenian creator's
 reputation all over the world also in game development, and open the new opportunities for our homeland.`;
 
-const buttons = ["about", "our mission", "courses", "registration", "faq"];
+const buttons = [
+  "about",
+  "our mission",
+  "courses",
+  "conditions",
+  "registration",
+  "faq",
+];
 
 export function Layout() {
   const [open, setOpen] = useState(false);
@@ -145,21 +157,105 @@ export function Layout() {
           />
         </CoursesSC>
       </ContentSC>
-      <ContentSC id="prices">
+      <ContentSC id="conditions" width="100%">
+        <DividerContainerSC>
+          <DividerSC />
+          <Typography
+            variant="h2"
+            fontFamily="Brutal-Regular"
+            color="#fff"
+          >
+            {pricesTitle}
+          </Typography>
+        </DividerContainerSC>
         <Typography
-          variant="h2"
-          align="center"
-          mb={5}
+          variant="h5"
+          align="left"
           fontFamily="Brutal-Regular"
+          color="#fff"
         >
-          {pricesTitle}
-        </Typography>
-        <Typography variant="h4" align="center" fontFamily="Brutal-Regular">
           {pricesSubTitle}
         </Typography>
-        <Typography variant="h5" align="center" fontFamily="Brutal-Regular">
-          {price}
-        </Typography>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div>
+            <Price>
+              <Typography
+                variant="h6"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#ffee33"
+              >
+                69.000 AMD
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#fff"
+              >
+                Monthly base price
+              </Typography>
+            </Price>
+            <Price>
+              <Typography
+                variant="h6"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#ffee33"
+              >
+                59.000 AMD
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#fff"
+              >
+                Monthly discounted price for all kind of artists (3D modellers, painters, musicians etc…)
+                and programmers. A link to the portfolio is required to be sent to our e-mail address.
+              </Typography>
+            </Price>
+            <Price>
+              <Typography
+                variant="h6"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#ffee33"
+              >
+                49.000 AMD
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#fff"
+              >
+                Discounted monthly price for all students. Student card is required to be sent to our e-mail address.
+              </Typography>
+            </Price>
+            <Price>
+              <Typography
+                variant="h6"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#ffee33"
+              >
+                29.000 AMD
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                fontFamily="Brutal-Regular"
+                color="#fff"
+              >
+                Monthly discounted price for our war heros,their children and soldiers just finished serving in army.
+                Army ticket scan is required to be sent to our e-mail address.
+              </Typography>
+            </Price>
+          </div>
+          <Image src={times} />
+        </div>
+        <Gradient3 />
       </ContentSC>
       <ContentSC id="registration">
         <Typography
