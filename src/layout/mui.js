@@ -1,6 +1,12 @@
 import { styled } from "@mui/material/styles";
 import {
-  Container, Box, Button, Divider,
+  Container,
+  Box,
+  Button,
+  Divider,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
 
 export const ContainerSC = styled(Container)`
@@ -117,7 +123,8 @@ export const DividerContainerSC = styled("div")`
 export const DividerSC = styled(Divider)`
   border-color: #fff;
   border-bottom-width: unset;
-  width: 36%;
+  flex: 1;
+  margin-right: 24%;
 `;
 
 export const Price = styled("div")`
@@ -133,3 +140,35 @@ export const Price = styled("div")`
     box-shadow: 0 0 15px 5px #7171ce79;
   }
 `;
+
+export const PriceContainerSC = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+export const ConditionsSC = styled("div")`
+  display: flex;
+  justify-content: space-between;
+  height: 70%;
+  width: 83%;
+  margin: auto;
+`;
+
+export const Gradient4 = styled("div")`
+    background: #0F1129;
+    position: absolute;
+    top: 621vh;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+`;
+
+export const AccordionSC = styled(Accordion)`
+  background: linear-gradient(to right, #9862ca, #517cd1);
+  width: 80%;
+`;
+export const AccordionSummarySC = styled(AccordionSummary)``;
+export const AccordionDetailsSC = styled(AccordionDetails)``;
