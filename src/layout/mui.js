@@ -18,38 +18,44 @@ export const ContainerSC = styled(Container)`
 `;
 
 export const NavigationSC = styled(Box)`
-  height: 30vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
   flex-wrap: wrap;
+  margin-bottom: 5%;
 `;
 
 export const ButtonSC = styled(Button)`
-  width: 200px;
-  height: 50px;
-  margin: 10px;
+  width: fit-content;
+  height: 40px;
+  margin: 0;
 `;
 
 export const ContentSC = styled(Box)`
+  height: fit-content;
+  min-height: 100vh;
+  box-sizing: border-box;
   padding-top: 40px;
-  height: 100vh;
-  /* position: relative; */
-  /* top: 5vh; */
-  /*background: #212330e0;
-  padding: 20px;
-  border-radius: 20px;
-  color: #ededef;
-  box-shadow: inset #373b3e 0 0 40px 10px, #303538 0 0 24px 12px; */
+  @media (min-width: 600px) {
+    padding-top: 8px;
+  }
+  @media (min-width: 0px) {
+    padding-top: 0px;
+  }
+  @media (min-width: 900px) {
+    padding-top: 24px;
+  }
 `;
 
 export const CoursesSC = styled(Box)`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 40px;
   & > * {
-    margin: 5px;
+    margin: 10px;
   }
 `;
 
@@ -57,12 +63,15 @@ export const Image = styled(Box)`
   background-image: ${({ src }) => `url(${src})`};
   background-size: cover;
   background-position: center;
-  width: 85%;
-  height: 450px;
-  margin: 60px auto;
+  flex-grow: 1;
+  margin: 10px auto;
+  width: 90%;
 `;
 
-export const BGImage = styled("img")`
+export const BGImage = styled("div")`
+  background-image: ${({ src }) => `url(${src})`};
+  background-size: cover;
+  background-position: left;
   position: absolute;
   top: 200vh;
   right: 0;
