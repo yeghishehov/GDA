@@ -17,31 +17,43 @@ export const ContainerSC = styled(Container)`
   ${({ bgcolor }) => (bgcolor ? `background-color: ${bgcolor};` : "")}
 `;
 
+export const ContainerHeaderSC = styled(ContainerSC)`
+  justify-content: space-between;
+  height: 90vh;
+`;
+
 export const NavigationSC = styled(Box)`
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin-bottom: 5%;
+`;
+export const NavigationFixSC = styled(NavigationSC)`
+  position: fixed;
+  top: 0;
+  background: #0f1129;
+  z-index: 99999;
 `;
 
 export const ButtonSC = styled(Button)`
   width: fit-content;
   height: 40px;
   margin: 0;
+  ${({ reg }) => reg === "true" && "color: #ffee33;"}
 `;
 
-export const ContentSC = styled(Box)`
+export const ContentSC = styled("div")`
+  position: relative;
   height: fit-content;
+  width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
+  padding: 0;
   padding-top: 40px;
+  box-sizing: border-box;
   @media (min-width: 600px) {
-    padding-top: 8px;
-  }
-  @media (min-width: 0px) {
-    padding-top: 0px;
+    padding-top: 12px;
   }
   @media (min-width: 900px) {
     padding-top: 24px;
@@ -73,20 +85,23 @@ export const BGImage = styled("div")`
   background-size: cover;
   background-position: left;
   position: absolute;
-  top: 200vh;
+  top: 0;
   right: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
 `;
 
 export const Gradient = styled("div")`
     background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(85 92 137 / 50%) 50%);
     position: absolute;
-    top: 200vh;
-    left: 0;
+    position: absolute;
+    top: 0;
     right: 0;
+    left: 0;
+    bottom: 0;
     height: 100vh;
     z-index: -1;
 `;
@@ -94,20 +109,20 @@ export const Gradient = styled("div")`
 export const Gradient2 = styled("div")`
     background: rgba(13, 16, 34, 0.6);
     position: absolute;
-    top: 200vh;
-    left: 0;
+    top: 0;
     right: 0;
-    height: 100vh;
+    left: 0;
+    bottom: 0;
     z-index: -1;
 `;
 
 export const Gradient3 = styled("div")`
     background: #1A1A32;
     position: absolute;
-    top: 412vh;
-    left: 0;
+    top: 0;
     right: 0;
-    height: 100vh;
+    left: 0;
+    bottom: 0;
     z-index: -1;
 `;
 
@@ -125,7 +140,8 @@ export const CourseModal = styled(Box)`
 export const DividerContainerSC = styled("div")`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
   margin-bottom: 40px;
 `;
 
@@ -137,16 +153,21 @@ export const DividerSC = styled(Divider)`
 `;
 
 export const Price = styled("div")`
-  width: 300px;
-  margin: 20px;
+  width: 320px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
   background: #9862ca;
   background: linear-gradient(to right, #9862ca, #517cd1);
   padding: 20px;
   border-radius: 20px 20px 0 20px;
   transition: .2s;
+  box-sizing: border-box;
   &:hover {
     box-shadow: 0 0 15px 5px #7171ce79;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
   }
 `;
 
@@ -160,24 +181,38 @@ export const PriceContainerSC = styled("div")`
 export const ConditionsSC = styled("div")`
   display: flex;
   justify-content: space-between;
-  height: 70%;
-  width: 83%;
-  margin: auto;
+  width: 80%;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const Gradient4 = styled("div")`
     background: #0F1129;
     position: absolute;
-    top: 621vh;
-    left: 0;
+    top: 0;
     right: 0;
-    height: 100vh;
+    left: 0;
+    bottom: 0;
     z-index: -1;
 `;
 
 export const AccordionSC = styled(Accordion)`
-  background: linear-gradient(to right, #9862ca, #517cd1);
+  background: linear-gradient(to right, #9862ca60, #517cd160);
   width: 80%;
 `;
 export const AccordionSummarySC = styled(AccordionSummary)``;
 export const AccordionDetailsSC = styled(AccordionDetails)``;
+export const IframeSC = styled("iframe")`
+  width: 100%;
+  height: 1218px;
+  @media (max-width: 663px) {
+    height: 1250px;
+  }
+  @media (max-width: 622px) {
+    height: 1266px;
+  }
+  @media (max-width: 598px) {
+    height: 1266px;
+  }
+`;

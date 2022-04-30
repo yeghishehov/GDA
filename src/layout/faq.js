@@ -8,6 +8,7 @@ import {
   AccordionSC,
   AccordionSummarySC,
   AccordionDetailsSC,
+  ContainerSC,
 } from "./mui";
 
 const faq = [
@@ -72,44 +73,84 @@ export function Faq() {
 
   return (
     <ContentSC id="faq">
-      <Typography
-        variant="h2"
-        align="center"
-        fontFamily="Brutal-Regular"
-        color="#fff"
-        mb={2}
-      >
-        FAQ
-      </Typography>
-      <Typography
-        variant="h6"
-        align="center"
-        fontFamily="Brutal-Regular"
-        color="#fff"
-        mb={4}
-      >
-        Helpful Information
-      </Typography>
-      <PriceContainerSC>
-        {faq.map((f) => (
-          <AccordionSC key={f.id} expanded={expanded === f.id} onChange={handleChange(f.id)}>
-            <AccordionSummarySC
-              expandIcon={<ExpandMoreIcon />}
-              id={f.id}
-            >
-              <Typography fontFamily="Brutal-Regular" color="#ffee33" fontSize={16}>
-                {f.question}
-              </Typography>
-            </AccordionSummarySC>
-            <AccordionDetailsSC>
-              {f.answer.map((answer, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <Typography key={index} fontFamily="Brutal-Regular" color="#fff" fontSize={14}>{answer}</Typography>
-              ))}
-            </AccordionDetailsSC>
-          </AccordionSC>
-        ))}
-      </PriceContainerSC>
+      <ContainerSC>
+        <Typography
+          variant="h2"
+          align="center"
+          fontFamily="Brutal-Regular"
+          color="#fff"
+          mb={2}
+          sx={{
+            fontSize: {
+              md: "3.45rem",
+              sm: "2.75rem",
+              xs: "1.5rem",
+            },
+          }}
+        >
+          FAQ
+        </Typography>
+        <Typography
+          variant="h6"
+          align="center"
+          fontFamily="Brutal-Regular"
+          color="#fff"
+          mb={4}
+          sx={{
+            fontSize: {
+              md: "1.25rem;",
+              sm: "1rem",
+              xs: "1rem",
+            },
+          }}
+        >
+          Helpful Information
+        </Typography>
+        <PriceContainerSC sx={{ mb: 20 }}>
+          {faq.map((f) => (
+            <AccordionSC key={f.id} expanded={expanded === f.id} onChange={handleChange(f.id)}>
+              <AccordionSummarySC
+                expandIcon={<ExpandMoreIcon />}
+                id={f.id}
+              >
+                <Typography
+                  fontFamily="Brutal-Regular"
+                  color="#ffee33"
+                  sx={{
+                    fontSize: {
+                      md: "1.25rem;",
+                      sm: "1rem",
+                      xs: "1rem",
+                    },
+                  }}
+                >
+                  {f.question}
+                </Typography>
+              </AccordionSummarySC>
+              <AccordionDetailsSC>
+                {f.answer.map((answer, index) => (
+                  <Typography
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={index}
+                    fontFamily="Brutal-Regular"
+                    color="#fff"
+                    sx={{
+                      fontSize: {
+                        md: "1rem;",
+                        sm: "0.8rem",
+                        xs: "0.8rem",
+                      },
+                    }}
+                  >
+                    {answer}
+
+                  </Typography>
+                ))}
+              </AccordionDetailsSC>
+            </AccordionSC>
+          ))}
+        </PriceContainerSC>
+      </ContainerSC>
       <Gradient4 />
     </ContentSC>
   );

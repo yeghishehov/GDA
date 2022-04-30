@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
-import { ContentSC, Image } from "./mui";
+import { Typography, Box } from "@mui/material";
+import { ContainerSC, ContentSC, Image } from "./mui";
 import winImg from "../assets/images/win.jpg";
 
 const aboutTitle = "What is Game Development";
@@ -15,36 +15,46 @@ export function About() {
         flexDirection: "column",
       }}
     >
-      <Typography
-        variant="h2"
-        align="center"
-        mb={2}
-        fontFamily="Brutal-Regular"
-        sx={{
-          fontSize: {
-            md: "3.45rem",
-            sm: "2.75rem",
-            xs: "1.5rem",
-          },
-        }}
-      >
-        {aboutTitle}
-      </Typography>
-      <Typography
-        variant="h5"
-        align="center"
-        fontFamily="Brutal-Regular"
-        sx={{
-          fontSize: {
-            md: "1.3rem;",
-            sm: "1.2rem",
-            xs: "1rem",
-          },
-        }}
-      >
-        {about}
-      </Typography>
-      <Image src={winImg} />
+      <ContainerSC>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh",
+          }}
+        >
+          <Typography
+            variant="h2"
+            align="center"
+            mb={2}
+            fontFamily="Brutal-Regular"
+            sx={{
+              fontSize: {
+                md: "3.45rem",
+                sm: "2.75rem",
+                xs: "1.5rem",
+              },
+            }}
+          >
+            {aboutTitle}
+          </Typography>
+          <Typography
+            variant="h5"
+            align="center"
+            fontFamily="Brutal-Regular"
+            sx={{
+              fontSize: {
+                md: "1.3rem;",
+                sm: "1.2rem",
+                xs: "1rem",
+              },
+            }}
+          >
+            {about}
+          </Typography>
+          <Image src={winImg} />
+        </Box>
+      </ContainerSC>
     </ContentSC>
   );
 }

@@ -2,30 +2,10 @@ import { styled } from "@mui/material/styles";
 import { Box /* , Typography */ } from "@mui/material";
 
 export const BoxSC = styled(Box)`
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  right: 5%;
-  transform: translateY(-50%);
-  // height: 40%;
-  width: 94%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   user-select: none;
   pointer-events: none;
   & img {
-    width: 90%;
-    max-height: 100%;
-  }
-  @media (max-width: 900px) {
-    height: 30%;
-  }
-  @media (max-width: 600px) {
-    height: 20%;
-  }
-  @media (max-width: 450px) {
-    height: 16%;
+    width: 100%;
   }
 `;
 

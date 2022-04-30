@@ -1,6 +1,5 @@
 html, body {
-  height: 99%;
-  width: 99%;
+  width: 100%;
 }
 body {
   margin: 0;
@@ -10,6 +9,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #DBDEE3;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
 code {
