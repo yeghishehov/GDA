@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import MenuIcon from "@mui/icons-material/Menu";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import { Header } from "../components/header";
 import { ParticlesBackground } from "../components/particles";
 import { Description } from "../components/description";
 import {
-  ContainerHeaderSC, ContentSC, ButtonSC, NavigationSC, NavigationFixSC,
+  ContainerHeaderSC, ContainerHeaderFixSC, ContentSC, ButtonSC, NavigationSC, NavigationFixSC,
 } from "./mui";
 
 const buttons = [
@@ -17,10 +19,9 @@ const buttons = [
 ];
 
 export function Banner() {
-  const isMobile1 = useMediaQuery("(max-width:658px)");
-  const isMobile2 = useMediaQuery("(max-width:559px)");
-  const isMobile3 = useMediaQuery("(max-width:357px)");
+  const isMobile = useMediaQuery("(max-width:900px)");
   const [isFixNav, setIsFixNav] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const smoothScroll = (e) => {
     const element = document.getElementById(e.target.name);
     if (element) {
@@ -30,27 +31,31 @@ export function Banner() {
 
   useEffect(() => {
     const changeNaxFix = () => {
-      if (isMobile3) {
-        setIsFixNav(window.scrollY > 80);
-      } else if (isMobile2) {
-        setIsFixNav(window.scrollY > 74);
-      } else if (isMobile1) {
-        setIsFixNav(window.scrollY > 59);
-      } else {
-        setIsFixNav(window.scrollY > 2);
-      }
+      setIsFixNav(window.scrollY > 0);
     };
     window.addEventListener("scroll", changeNaxFix);
     return () => {
       window.removeEventListener("scroll", changeNaxFix);
     };
-  }, [isMobile1, isMobile2]);
+  }, []);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event
+      && event.type === "keydown"
+      && (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setMobileMenuOpen(open);
+  };
 
   return (
     <ContentSC id="banner">
       <ParticlesBackground />
-      {isFixNav && (
-        <NavigationFixSC>
+
+      <NavigationFixSC background={isFixNav}>
+        <ContainerHeaderFixSC>
           {buttons.map((button) => (
             <ButtonSC
               key={button}
@@ -70,33 +75,44 @@ export function Banner() {
           >
             registration
           </ButtonSC>
-        </NavigationFixSC>
-      )}
+        </ContainerHeaderFixSC>
+        {isMobile && <MenuIcon color="primary" onClick={toggleDrawer(true)} />}
+      </NavigationFixSC>
+
       <ContainerHeaderSC>
-        <NavigationSC>
-          {buttons.map((button) => (
-            <ButtonSC
-              key={button}
-              variant="text"
-              size="large"
-              name={button}
-              onClick={smoothScroll}
-            >
-              {button}
-            </ButtonSC>
-          ))}
-          <ButtonSC
-            variant="text"
-            size="large"
-            onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
-            reg="true"
-          >
-            registration
-          </ButtonSC>
-        </NavigationSC>
+        <NavigationSC />
         <Header />
         <Description />
       </ContainerHeaderSC>
+
+      <SwipeableDrawer
+        anchor="right"
+        open={mobileMenuOpen}
+        onClose={toggleDrawer(false)}
+        onOpen={toggleDrawer(true)}
+      >
+        <ContainerHeaderFixSC>
+          {buttons.map((button) => (
+            <ButtonSC
+              key={button}
+              variant="text"
+              size="large"
+              name={button}
+              onClick={smoothScroll}
+            >
+              {button}
+            </ButtonSC>
+          ))}
+          <ButtonSC
+            variant="text"
+            size="large"
+            onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
+            reg="true"
+          >
+            registration
+          </ButtonSC>
+        </ContainerHeaderFixSC>
+      </SwipeableDrawer>
     </ContentSC>
   );
 }

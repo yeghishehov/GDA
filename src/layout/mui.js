@@ -22,6 +22,21 @@ export const ContainerHeaderSC = styled(ContainerSC)`
   height: 90vh;
 `;
 
+export const ContainerHeaderFixSC = styled(Container)`
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media (min-width: 600px) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  @media (min-width: 900px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+`;
+
 export const NavigationSC = styled(Box)`
   width: 100%;
   display: flex;
@@ -32,7 +47,7 @@ export const NavigationSC = styled(Box)`
 export const NavigationFixSC = styled(NavigationSC)`
   position: fixed;
   top: 0;
-  background: #0f1129;
+  background: ${({ background }) => (background ? "#0f1129" : "transparent")};
   z-index: 99999;
 `;
 
