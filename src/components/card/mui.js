@@ -12,7 +12,7 @@ export const CardSC = styled(Card)`
   align-items: center;
   border-radius: 20px;
   width: calc(100% / 3 - 90px);
-  min-width: 190px;
+  min-width: 210px;
   box-sizing: border-box;
   height: 277px;
   padding: 20px;
@@ -46,8 +46,10 @@ export const CardSC = styled(Card)`
     transform: translateY(10px);
   }
   @media (max-width: 770px) {
-    min-width: 155px;
+    min-width: 175px;
     height: 228px;
+    margin: 0 5px;
+    margin-bottom: 20px;
     &::before {
       height: 85px;
     }
@@ -56,18 +58,22 @@ export const CardSC = styled(Card)`
     }
   }
   @media (max-width: 430px) {
-    min-width: 130px;
-    height: 228px;
+    min-width: 150px;
+    height: 200px;
+    margin: 0 5px;
+    margin-bottom: 20px;
     &::before {
-      height: 85px;
+      height: 70px;
     }
     &::after {
       top: 100px;
     }
   }
   @media (max-width: 380px) {
-    min-width: 100px;
+    min-width: 140px; 
     height: 180px;
+    margin: 0 5px;
+    margin-bottom: 20px;
     &::before {
       height: 75px;
     }
@@ -96,6 +102,12 @@ export const CardHeaderSC = styled(Typography)`
   @media (max-width: 380px) {
     font-size: 0.9rem;
   }
+  @media (max-width: 430px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 770px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const CardContentSC = styled(CardContent)`
@@ -107,6 +119,10 @@ export const CardContentSC = styled(CardContent)`
   @media (max-width: 380px) {
     font-size: 0.7rem;
     padding-top: 2px;
+  }
+  @media (max-width: 430px) {
+    font-size: 0.9rem;
+    padding-bottom: 15px !important;
   }
 `;
 

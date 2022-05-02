@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
 import MenuIcon from "@mui/icons-material/Menu";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import logo from "../assets/images/logo.svg";
 import { Header } from "../components/header";
 import { ParticlesBackground } from "../components/particles";
 import { Description } from "../components/description";
@@ -20,12 +22,18 @@ const buttons = [
 
 export function Banner() {
   const isMobile = useMediaQuery("(max-width:900px)");
+  const [timeoutId, setTimeoutId] = useState(null);
   const [isFixNav, setIsFixNav] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const smoothScroll = (e) => {
     const element = document.getElementById(e.target.name);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const id = setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeoutId(null);
+      }, 0);
+      setTimeoutId(id);
     }
   };
 
@@ -36,6 +44,9 @@ export function Banner() {
     window.addEventListener("scroll", changeNaxFix);
     return () => {
       window.removeEventListener("scroll", changeNaxFix);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
     };
   }, []);
 
@@ -51,32 +62,71 @@ export function Banner() {
   };
 
   return (
-    <ContentSC id="banner">
+    <ContentSC id="home">
       <ParticlesBackground />
 
       <NavigationFixSC background={isFixNav}>
-        <ContainerHeaderFixSC>
-          {buttons.map((button) => (
+        {!isMobile && (
+          <ContainerHeaderFixSC>
+            <img
+              src={logo}
+              alt=""
+              width={44}
+              name="home"
+              onClick={smoothScroll}
+              role="presentation"
+              style={{ cursor: "pointer" }}
+            />
+            {buttons.map((button) => (
+              <ButtonSC
+                key={button}
+                variant="text"
+                size="large"
+                name={button}
+                onClick={smoothScroll}
+              >
+                {button}
+              </ButtonSC>
+            ))}
             <ButtonSC
-              key={button}
               variant="text"
               size="large"
-              name={button}
-              onClick={smoothScroll}
+              onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
+              reg="true"
             >
-              {button}
+              registration
             </ButtonSC>
-          ))}
-          <ButtonSC
-            variant="text"
-            size="large"
-            onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
-            reg="true"
-          >
-            registration
-          </ButtonSC>
-        </ContainerHeaderFixSC>
-        {isMobile && <MenuIcon color="primary" onClick={toggleDrawer(true)} />}
+          </ContainerHeaderFixSC>
+        )}
+        {isMobile && (
+          <>
+            <img
+              src={logo}
+              alt=""
+              width={44}
+              name="home"
+              onClick={smoothScroll}
+              role="presentation"
+              style={{ cursor: "pointer" }}
+            />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <ButtonSC
+                variant="text"
+                size="large"
+                onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
+                reg="true"
+              >
+                Enroll Now
+              </ButtonSC>
+              <MenuIcon color="primary" onClick={toggleDrawer(true)} style={{ cursor: "pointer" }} />
+            </Box>
+          </>
+        )}
       </NavigationFixSC>
 
       <ContainerHeaderSC>
@@ -86,12 +136,36 @@ export function Banner() {
       </ContainerHeaderSC>
 
       <SwipeableDrawer
-        anchor="right"
+        anchor="top"
         open={mobileMenuOpen}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
+        style={{ zIndex: 99999 }}
+        PaperProps={{
+          sx: {
+            backgroundColor: "#1a1a32",
+          },
+        }}
       >
-        <ContainerHeaderFixSC>
+        <Box
+          role="presentation"
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={logo}
+            alt=""
+            width={44}
+            name="home"
+            onClick={smoothScroll}
+            role="presentation"
+            style={{ cursor: "pointer" }}
+          />
           {buttons.map((button) => (
             <ButtonSC
               key={button}
@@ -109,9 +183,9 @@ export function Banner() {
             onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
             reg="true"
           >
-            registration
+            Enroll Now
           </ButtonSC>
-        </ContainerHeaderFixSC>
+        </Box>
       </SwipeableDrawer>
     </ContentSC>
   );

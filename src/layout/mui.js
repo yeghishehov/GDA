@@ -25,23 +25,15 @@ export const ContainerHeaderSC = styled(ContainerSC)`
 export const ContainerHeaderFixSC = styled(Container)`
   display: flex;
   justify-content: space-around;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  @media (min-width: 600px) {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  @media (min-width: 900px) {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
+  padding-top: 12px;
+  padding-bottom: 12px;
 `;
 
 export const NavigationSC = styled(Box)`
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 `;
 export const NavigationFixSC = styled(NavigationSC)`
@@ -49,6 +41,8 @@ export const NavigationFixSC = styled(NavigationSC)`
   top: 0;
   background: ${({ background }) => (background ? "#0f1129" : "transparent")};
   z-index: 99999;
+  box-sizing: border-box;
+  padding: 0 20px;
 `;
 
 export const ButtonSC = styled(Button)`
@@ -65,14 +59,8 @@ export const ContentSC = styled("div")`
   min-height: 100vh;
   box-sizing: border-box;
   padding: 0;
-  padding-top: 40px;
+  padding-top: 12px;
   box-sizing: border-box;
-  @media (min-width: 600px) {
-    padding-top: 12px;
-  }
-  @media (min-width: 900px) {
-    padding-top: 24px;
-  }
 `;
 
 export const CoursesSC = styled(Box)`
@@ -137,7 +125,7 @@ export const Gradient3 = styled("div")`
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     z-index: -1;
 `;
 

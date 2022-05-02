@@ -12,7 +12,7 @@ reputation all over the world also in game development, and open the new opportu
 
 export function Mission() {
   return (
-    <ContentSC id="our mission" overflow="hidden" sx={{ pt: { xs: 2 } }}>
+    <ContentSC id="our mission" overflow="hidden">
       <ContainerSC>
         <Typography
           variant="h2"

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Typography, Modal } from "@mui/material";
+import question from "../assets/images/question.png";
 import { Card } from "../components/card";
 import UELogo from "../assets/images/UE_Logo1.png";
 import unityLogo from "../assets/images/unity.png";
@@ -17,7 +18,7 @@ export function Courses() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
-    <ContentSC id="courses" sx={{ pt: { xs: 2 }, display: "flex", flexDirection: "column" }}>
+    <ContentSC id="courses" sx={{ display: "flex", flexDirection: "column" }}>
       <ContainerSC>
         <Typography
           variant="h2"
@@ -62,28 +63,28 @@ export function Courses() {
             gradient="to right, #814fd3, #ac50ce"
           />
           <Card
-            logo={unityLogo}
-            title="Unity 3D"
-            content="coming soon"
-            gradient="to right, #814fd3, #ac50ce"
+            logo={question}
+            title="coming soon"
+            // content="coming soon"
+            gradient="to right, #858585, #858585"
           />
           <Card
-            logo={unityLogo}
-            title="Unity 3D"
-            content="coming soon"
-            gradient="to right, #814fd3, #ac50ce"
+            logo={question}
+            title="coming soon"
+            // content="coming soon"
+            gradient="to right, #858585, #858585"
           />
           <Card
-            logo={unityLogo}
-            title="Unity 3D"
-            content="coming soon"
-            gradient="to right, #814fd3, #ac50ce"
+            logo={question}
+            title="coming soon"
+            // content="coming soon"
+            gradient="to right, #858585, #858585"
           />
           <Card
-            logo={unityLogo}
-            title="Unity 3D"
-            content="coming soon"
-            gradient="to right, #814fd3, #ac50ce"
+            logo={question}
+            title="coming soon"
+            // content="coming soon"
+            gradient="to right, #858585, #858585"
           />
         </CoursesSC>
         <Modal open={open} onClose={handleClose}>
