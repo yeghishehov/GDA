@@ -8,7 +8,12 @@ import { Header } from "../components/header";
 import { ParticlesBackground } from "../components/particles";
 import { Description } from "../components/description";
 import {
-  ContainerHeaderSC, ContainerHeaderFixSC, ContentSC, ButtonSC, NavigationSC, NavigationFixSC,
+  ContainerHeaderSC,
+  ContainerHeaderFixSC,
+  ContentSC,
+  ButtonSC,
+  NavigationSC,
+  NavigationFixSC,
 } from "./mui";
 
 const buttons = [
@@ -21,10 +26,9 @@ const buttons = [
 ];
 
 export function Banner() {
-  const isMobile = useMediaQuery("(max-width:900px)");
   const [timeoutId, setTimeoutId] = useState(null);
-  const [isFixNav, setIsFixNav] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => () => timeoutId ?? clearTimeout(timeoutId), []);
 
   const smoothScroll = (e) => {
     const element = document.getElementById(e.target.name);
@@ -37,17 +41,61 @@ export function Banner() {
     }
   };
 
+  return (
+    <ContentSC id="home">
+      <ParticlesBackground />
+
+      <MobileDrawerWrapper smoothScroll={smoothScroll}>
+        <img
+          src={logo}
+          alt=""
+          width={44}
+          name="home"
+          onClick={smoothScroll}
+          role="presentation"
+          style={{ cursor: "pointer" }}
+        />
+        {buttons.map((button) => (
+          <ButtonSC
+            key={button}
+            variant="text"
+            size="large"
+            name={button}
+            onClick={smoothScroll}
+          >
+            {button}
+          </ButtonSC>
+        ))}
+        <ButtonSC
+          variant="text"
+          size="large"
+          onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
+          reg="true"
+        >
+          registration
+        </ButtonSC>
+      </MobileDrawerWrapper>
+
+      <ContainerHeaderSC>
+        <NavigationSC />
+        <Header />
+        <Description />
+      </ContainerHeaderSC>
+    </ContentSC>
+  );
+}
+
+function MobileDrawerWrapper({ smoothScroll, children }) {
+  const isMobile = useMediaQuery("(max-width:900px)");
+  const [isFixNav, setIsFixNav] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const changeNaxFix = () => {
       setIsFixNav(window.scrollY > 0);
     };
     window.addEventListener("scroll", changeNaxFix);
-    return () => {
-      window.removeEventListener("scroll", changeNaxFix);
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
+    return () => window.removeEventListener("scroll", changeNaxFix);
   }, []);
 
   const toggleDrawer = (open) => (event) => {
@@ -61,80 +109,39 @@ export function Banner() {
     setMobileMenuOpen(open);
   };
 
-  return (
-    <ContentSC id="home">
-      <ParticlesBackground />
-
+  return isMobile ? (
+    <>
       <NavigationFixSC background={isFixNav}>
-        {!isMobile && (
-          <ContainerHeaderFixSC>
-            <img
-              src={logo}
-              alt=""
-              width={44}
-              name="home"
-              onClick={smoothScroll}
-              role="presentation"
-              style={{ cursor: "pointer" }}
-            />
-            {buttons.map((button) => (
-              <ButtonSC
-                key={button}
-                variant="text"
-                size="large"
-                name={button}
-                onClick={smoothScroll}
-              >
-                {button}
-              </ButtonSC>
-            ))}
-            <ButtonSC
-              variant="text"
-              size="large"
-              onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
-              reg="true"
-            >
-              registration
-            </ButtonSC>
-          </ContainerHeaderFixSC>
-        )}
-        {isMobile && (
-          <>
-            <img
-              src={logo}
-              alt=""
-              width={44}
-              name="home"
-              onClick={smoothScroll}
-              role="presentation"
-              style={{ cursor: "pointer" }}
-            />
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <ButtonSC
-                variant="text"
-                size="large"
-                onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
-                reg="true"
-              >
-                Enroll Now
-              </ButtonSC>
-              <MenuIcon color="primary" onClick={toggleDrawer(true)} style={{ cursor: "pointer" }} />
-            </Box>
-          </>
-        )}
+        <img
+          src={logo}
+          alt=""
+          width={44}
+          name="home"
+          onClick={smoothScroll}
+          role="presentation"
+          style={{ cursor: "pointer" }}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <ButtonSC
+            variant="text"
+            size="large"
+            onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
+            reg="true"
+          >
+            Enroll Now
+          </ButtonSC>
+          <MenuIcon
+            color="primary"
+            onClick={toggleDrawer(true)}
+            style={{ cursor: "pointer" }}
+          />
+        </Box>
       </NavigationFixSC>
-
-      <ContainerHeaderSC>
-        <NavigationSC />
-        <Header />
-        <Description />
-      </ContainerHeaderSC>
-
       <SwipeableDrawer
         anchor="top"
         open={mobileMenuOpen}
@@ -157,36 +164,13 @@ export function Banner() {
             alignItems: "center",
           }}
         >
-          <img
-            src={logo}
-            alt=""
-            width={44}
-            name="home"
-            onClick={smoothScroll}
-            role="presentation"
-            style={{ cursor: "pointer" }}
-          />
-          {buttons.map((button) => (
-            <ButtonSC
-              key={button}
-              variant="text"
-              size="large"
-              name={button}
-              onClick={smoothScroll}
-            >
-              {button}
-            </ButtonSC>
-          ))}
-          <ButtonSC
-            variant="text"
-            size="large"
-            onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
-            reg="true"
-          >
-            Enroll Now
-          </ButtonSC>
+          {children}
         </Box>
       </SwipeableDrawer>
-    </ContentSC>
+    </>
+  ) : (
+    <NavigationFixSC background={isFixNav}>
+      <ContainerHeaderFixSC>{children}</ContainerHeaderFixSC>
+    </NavigationFixSC>
   );
 }

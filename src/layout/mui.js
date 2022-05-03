@@ -138,6 +138,11 @@ export const CourseModal = styled(Box)`
     height: 60%;
     border-radius: 20px;
     background: #f5f1f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
 `;
 
 export const DividerContainerSC = styled("div")`

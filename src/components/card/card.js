@@ -3,10 +3,10 @@ import {
 } from "./mui";
 
 export function Card({
-  title, content, logo, gradient, onClick,
+  id, title, content, logo, gradient, onClick,
 }) {
   return (
-    <CardSC gradient={gradient} onClick={onClick}>
+    <CardSC gradient={gradient} id={id} onClick={onClick}>
       <CardMediaSC component="img" image={logo} />
       <BoxSC>
         <CardHeaderSC>{title}</CardHeaderSC>

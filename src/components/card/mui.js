@@ -20,6 +20,7 @@ export const CardSC = styled(Card)`
   box-sizing: border-box;
   opacity: 0.85;
   background: linear-gradient(${({ gradient }) => gradient});
+  cursor: pointer;
   transition: .7s;
   &::before {
     content: "";
@@ -99,14 +100,14 @@ export const CardHeaderSC = styled(Typography)`
   z-index: 1;
   color: #727072;
   font-family: "Montserrat", "Brutal-Regular";
-  @media (max-width: 380px) {
-    font-size: 0.9rem;
+  @media (max-width: 770px) {
+    font-size: 1.3rem;
   }
   @media (max-width: 430px) {
     font-size: 1.1rem;
   }
-  @media (max-width: 770px) {
-    font-size: 1.3rem;
+  @media (max-width: 380px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -116,13 +117,13 @@ export const CardContentSC = styled(CardContent)`
   z-index: 1;
   padding-top: 5px;
   text-align: center;
-  @media (max-width: 380px) {
-    font-size: 0.7rem;
-    padding-top: 2px;
-  }
   @media (max-width: 430px) {
     font-size: 0.9rem;
     padding-bottom: 15px !important;
+  }
+  @media (max-width: 380px) {
+    font-size: 0.7rem;
+    padding-top: 2px;
   }
 `;
 

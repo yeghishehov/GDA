@@ -1,5 +1,11 @@
+/* eslint-disable max-len */
 import { useState } from "react";
 import { Typography, Modal } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Box from "@mui/material/Box";
 import question from "../assets/images/question.png";
 import { Card } from "../components/card";
 import UELogo from "../assets/images/UE_Logo1.png";
@@ -11,12 +17,37 @@ import {
 
 const coursesTitle = "Lesson classes";
 const courses = "Choosing the game engine is one of the first steps of starting development.";
-const coursesDetailsTitle = "Courses overview";
+const overviews = {
+  "Unreal Engine": [
+    "Introduction to engine",
+    "Coordinates, Transforms, Units, and Organization",
+    "Applying Lighting and Rendering",
+    "Creating and Using Materials",
+    "Using Audio Systems",
+    "Creating Landscapes and Foliage",
+    "Using Static and Skeletal Meshes",
+    "Cinematic",
+    "Animations",
+    "AI",
+    "Optimization",
+    "Practice, teamworks and homeworks",
+  ],
+};
 
 export function Courses() {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [overview, setOverview] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState("");
+  const handleOpen = (e) => {
+    setSelectedCourse(e.currentTarget.id);
+    setOverview(overviews[e.currentTarget.id]);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setSelectedCourse("");
+    setOverview([]);
+    setOpen(false);
+  };
   return (
     <ContentSC id="courses" sx={{ display: "flex", flexDirection: "column" }}>
       <ContainerSC>
@@ -52,6 +83,7 @@ export function Courses() {
         <CoursesSC>
           <Card
             logo={UELogo}
+            id="Unreal Engine"
             title="Unreal Engine"
             gradient="to right, #7b91db, #7a4eda"
             onClick={handleOpen}
@@ -89,12 +121,27 @@ export function Courses() {
         </CoursesSC>
         <Modal open={open} onClose={handleClose}>
           <CourseModal>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-              {coursesDetailsTitle}
+            <Typography variant="h4" component="h2" fontFamily="Brutal-Regular">
+              {selectedCourse}
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <List>
+                {overview.slice(0, Math.round(overview.length / 2)).map((item) => (
+                  <ListItem key={item}>
+                    <AddIcon sx={{ mr: 1 }} />
+                    <ListItemText primary={item} secondary="" />
+                  </ListItem>
+                ))}
+              </List>
+              <List>
+                {overview.slice(Math.round(overview.length / 2), overview.length).map((item) => (
+                  <ListItem key={item}>
+                    <AddIcon sx={{ mr: 1 }} />
+                    <ListItemText primary={item} secondary="" />
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
           </CourseModal>
         </Modal>
       </ContainerSC>
