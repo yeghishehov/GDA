@@ -134,8 +134,6 @@ export const CourseModal = styled(Box)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 60%;
     border-radius: 20px;
     background: #f5f1f7;
     display: flex;
@@ -143,6 +141,7 @@ export const CourseModal = styled(Box)`
     align-items: center;
     justify-content: space-around;
     outline: none;
+    min-width: 300px;
 `;
 
 export const DividerContainerSC = styled("div")`
@@ -223,4 +222,9 @@ export const IframeSC = styled("iframe")`
   @media (max-width: 598px) {
     height: 1266px;
   }
+`;
+
+export const CourseIcon = styled("img")`
+    width: 20px;
+    margin-right: 10px;
 `;

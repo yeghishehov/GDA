@@ -1,18 +1,21 @@
 /* eslint-disable max-len */
 import { useState } from "react";
-import { Typography, Modal } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+// import AddIcon from "@mui/icons-material/Add";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
 import question from "../assets/images/question.png";
-import { Card } from "../components/card";
 import UELogo from "../assets/images/UE_Logo1.png";
+import UELogoBlack from "../assets/images/UE_Logo.png";
 import unityLogo from "../assets/images/unity.png";
+import unityBlackLogo from "../assets/images/unity-black.png";
+import { Card } from "../components/card";
 
 import {
-  ContentSC, CoursesSC, CourseModal, ContainerSC,
+  ContentSC, CoursesSC, CourseModal, ContainerSC, CourseIcon,
 } from "./mui";
 
 const coursesTitle = "Lesson classes";
@@ -31,7 +34,15 @@ const overviews = {
     "AI",
     "Optimization",
     "Practice, teamworks and homeworks",
+    "And much more",
   ],
+  "Unity 3D": [
+    "Comming Soon",
+  ],
+};
+const icons = {
+  "Unreal Engine": UELogoBlack,
+  "Unity 3D": unityBlackLogo,
 };
 
 export function Courses() {
@@ -90,9 +101,11 @@ export function Courses() {
           />
           <Card
             logo={unityLogo}
+            id="Unity 3D"
             title="Unity 3D"
             content="coming soon"
             gradient="to right, #814fd3, #ac50ce"
+            onClick={handleOpen}
           />
           <Card
             logo={question}
@@ -121,23 +134,60 @@ export function Courses() {
         </CoursesSC>
         <Modal open={open} onClose={handleClose}>
           <CourseModal>
-            <Typography variant="h4" component="h2" fontFamily="Brutal-Regular">
+            <Typography
+              variant="h4"
+              component="h2"
+              fontFamily="Brutal-Regular"
+              sx={{
+                fontSize: {
+                  md: "2rem",
+                  sm: "1.7rem",
+                  xs: "1.4rem",
+                },
+              }}
+            >
               {selectedCourse}
             </Typography>
             <Box sx={{ display: "flex" }}>
-              <List>
+              <List sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 {overview.slice(0, Math.round(overview.length / 2)).map((item) => (
                   <ListItem key={item}>
-                    <AddIcon sx={{ mr: 1 }} />
-                    <ListItemText primary={item} secondary="" />
+                    {/* <AddIcon sx={{ mr: 1 }} /> */}
+                    <CourseIcon src={icons[selectedCourse]} alt="" />
+                    <ListItemText
+                      primary={item}
+                      secondary=""
+                      primaryTypographyProps={{
+                        sx: {
+                          fontSize: {
+                            md: "1rem",
+                            sm: "0.9rem",
+                            xs: "0.6rem",
+                          },
+                        },
+                      }}
+                    />
                   </ListItem>
                 ))}
               </List>
-              <List>
+              <List sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 {overview.slice(Math.round(overview.length / 2), overview.length).map((item) => (
                   <ListItem key={item}>
-                    <AddIcon sx={{ mr: 1 }} />
-                    <ListItemText primary={item} secondary="" />
+                    <CourseIcon src={icons[selectedCourse]} alt="" />
+                    {/* <AddIcon sx={{ mr: 1 }} /> */}
+                    <ListItemText
+                      primary={item}
+                      secondary=""
+                      primaryTypographyProps={{
+                        sx: {
+                          fontSize: {
+                            md: "1rem;",
+                            sm: "0.9rem",
+                            xs: "0.6rem",
+                          },
+                        },
+                      }}
+                    />
                   </ListItem>
                 ))}
               </List>
