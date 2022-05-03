@@ -72,7 +72,7 @@ export function Banner() {
           onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
           reg="true"
         >
-          registration
+          Enroll Now
         </ButtonSC>
       </MobileDrawerWrapper>
 
