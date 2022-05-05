@@ -4,7 +4,6 @@ import {
   BGImage, Gradient, Gradient2, ContainerSC, ContentSC,
 } from "./mui";
 import img1 from "../assets/images/1.jfif";
-import img11 from "../assets/images/1.png";
 
 // const about2Title = "Our mission";
 const about2Title = "Մեր նպատակը";
@@ -55,7 +54,6 @@ export function Mission() {
         </Typography>
       </ContainerSC>
       <BGImage src={img1} />
-      <img src={img11} alt="" />
       <Gradient />
       <Gradient2 />
     </ContentSC>
