@@ -18,8 +18,9 @@ import {
   ContentSC, CoursesSC, CourseModal, ContainerSC, CourseIcon,
 } from "./mui";
 
-const coursesTitle = "Lesson classes";
-const courses = "Choosing the game engine is one of the first steps of starting development.";
+// const coursesTitle = "Lesson classes";
+const coursesTitle = "Բոլոր դասընթացները";
+// const courses = "Choosing the game engine is one of the first steps of starting development.";
 const overviews = {
   "Unreal Engine": [
     "Introduction to engine",
@@ -37,7 +38,8 @@ const overviews = {
     "And much more",
   ],
   "Unity 3D": [
-    "Comming Soon",
+    // "Comming Soon",
+    "Շուտով",
   ],
 };
 const icons = {
@@ -61,10 +63,11 @@ export function Courses() {
   };
   return (
     <ContentSC id="courses" sx={{ display: "flex", flexDirection: "column" }}>
-      <ContainerSC>
+      <ContainerSC sx={{ mb: 5 }}>
         <Typography
           variant="h2"
           align="center"
+          mt={5}
           mb={2}
           fontFamily="Brutal-Regular"
           sx={{
@@ -77,7 +80,7 @@ export function Courses() {
         >
           {coursesTitle}
         </Typography>
-        <Typography
+        {/* <Typography
           variant="h5"
           align="center"
           fontFamily="Brutal-Regular"
@@ -90,7 +93,7 @@ export function Courses() {
           }}
         >
           {courses}
-        </Typography>
+        </Typography> */}
         <CoursesSC>
           <Card
             logo={UELogo}
@@ -103,31 +106,36 @@ export function Courses() {
             logo={unityLogo}
             id="Unity 3D"
             title="Unity 3D"
-            content="coming soon"
+            // content="coming soon"
+            content="Շուտով"
             gradient="to right, #814fd3, #ac50ce"
             onClick={handleOpen}
           />
           <Card
             logo={question}
-            title="coming soon"
+            title="Շուտով"
+            // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
           />
           <Card
             logo={question}
-            title="coming soon"
+            title="Շուտով"
+            // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
           />
           <Card
             logo={question}
-            title="coming soon"
+            title="Շուտով"
+            // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
           />
           <Card
             logo={question}
-            title="coming soon"
+            title="Շուտով"
+            // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
           />

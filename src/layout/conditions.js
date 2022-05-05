@@ -12,8 +12,8 @@ import {
   ContainerSC,
 } from "./mui";
 
-const pricesTitle = "Conditions of education";
-// const price = "69.000 AMD, 59.000 AMD, 49.000 AMD, 29.000 AMD";
+// const pricesTitle = "Conditions of education";
+const pricesTitle = "Կրթության պայմանները";
 
 export function Conditions() {
   return (
@@ -26,6 +26,7 @@ export function Conditions() {
             fontFamily="Brutal-Regular"
             color="#fff"
             align="center"
+            mt={5}
             sx={{
               fontSize: {
                 md: "3.45rem",
@@ -37,7 +38,7 @@ export function Conditions() {
             {pricesTitle}
           </Typography>
         </DividerContainerSC>
-        <ConditionsSC>
+        <ConditionsSC sx={{ mb: 4 }}>
           <PriceContainerSC>
             <Typography
               variant="h4"
@@ -46,13 +47,14 @@ export function Conditions() {
               color="#fff"
               sx={{
                 fontSize: {
-                  md: "3rem;",
-                  sm: "2.2rem",
-                  xs: "1.4rem",
+                  md: "2.5rem;",
+                  sm: "1.8rem",
+                  xs: "1.2rem",
                 },
               }}
             >
-              Beginner course
+              Հիմունքներ
+              {/* Beginner course */}
             </Typography>
             <div>
               <Typography
@@ -68,7 +70,8 @@ export function Conditions() {
                   },
                 }}
               >
-                Duration
+                Տեւողությունը
+                {/* Duration */}
               </Typography>
               <Typography
                 variant="body1"
@@ -83,7 +86,8 @@ export function Conditions() {
                   },
                 }}
               >
-                3 months
+                {/* 3 months */}
+                3 ամիս
               </Typography>
             </div>
             <div>
@@ -100,7 +104,8 @@ export function Conditions() {
                   },
                 }}
               >
-                Course Format
+                Դասընթացի ձևաչափ
+                {/* Course Format */}
               </Typography>
               <Typography
                 variant="body1"
@@ -115,7 +120,8 @@ export function Conditions() {
                   },
                 }}
               >
-                All classes are held offline
+                {/* All classes are held offline */}
+                Բոլոր դասերն անցկացվում են օֆլայն (լսարանային)
               </Typography>
             </div>
             <div>
@@ -132,7 +138,8 @@ export function Conditions() {
                   },
                 }}
               >
-                Commitment
+                {/* Commitment */}
+                Դասաժամեր
               </Typography>
               <Typography
                 variant="body1"
@@ -147,11 +154,12 @@ export function Conditions() {
                   },
                 }}
               >
-                6 hours/week
+                {/* 6 hours/week */}
+                6 ժամ/շաբաթ
               </Typography>
             </div>
           </PriceContainerSC>
-          <div style={{ margin: "auto" }}>
+          <div>
             <Price>
               <Box sx={{
                 display: "flex", justifyContent: "center", alignItems: "flex-end", width: "100%",
@@ -172,7 +180,8 @@ export function Conditions() {
                     mr: 1,
                   }}
                 >
-                  39.000 AMD
+                  {/* 39.000 AMD */}
+                  39.000 ֏
                 </Typography>
                 <Typography
                   align="center"
@@ -188,7 +197,8 @@ export function Conditions() {
                     display: "inline-block",
                   }}
                 >
-                  69.000 AMD
+                  {/* 69.000 AMD */}
+                  69.000 ֏
                 </Typography>
               </Box>
               <Typography
@@ -204,7 +214,8 @@ export function Conditions() {
                   },
                 }}
               >
-                Monthly base price
+                {/* Monthly base price */}
+                Դասընթացների հիմնական ամսեկան արժեքը
               </Typography>
             </Price>
             <Price>
@@ -227,7 +238,7 @@ export function Conditions() {
                     mr: 1,
                   }}
                 >
-                  39.000 AMD
+                  39.000 ֏
                 </Typography>
                 <Typography
                   align="center"
@@ -243,7 +254,7 @@ export function Conditions() {
                     display: "inline-block",
                   }}
                 >
-                  59.000 AMD
+                  59.000 ֏
                 </Typography>
               </Box>
               <Typography
@@ -259,8 +270,9 @@ export function Conditions() {
                   },
                 }}
               >
-                Monthly discounted price for all kind of artists (3D modellers, painters, musicians etc…)
-                and programmers. A link to the portfolio is required to be sent to our e-mail address.
+                {/* Monthly discounted price for all kind of artists (3D modellers, painters, musicians etc…)
+                and programmers. A link to the portfolio is required to be sent to our e-mail address. */}
+                Դասընթացների ամսեկան գինը արվեստագետների և ծրագրավորողների համար։
               </Typography>
             </Price>
             <Price>
@@ -283,7 +295,7 @@ export function Conditions() {
                     mr: 1,
                   }}
                 >
-                  39.000 AMD
+                  39.000 ֏
                 </Typography>
                 <Typography
                   align="center"
@@ -299,7 +311,7 @@ export function Conditions() {
                     display: "inline-block",
                   }}
                 >
-                  49.000 AMD
+                  49.000 ֏
                 </Typography>
               </Box>
               <Typography
@@ -315,7 +327,8 @@ export function Conditions() {
                   },
                 }}
               >
-                Discounted monthly price for all students. Student card is required to be sent to our e-mail address.
+                {/* Discounted monthly price for all students. Student card is required to be sent to our e-mail address. */}
+                Դասընթացների ամսեկան գինը ուսանողների համար։ Ուսանողական քարտը պետք է ուղարկել info@gda.am էլ․ հասցեյին նշելով անունը և ազգանունը։
               </Typography>
             </Price>
             <Price>
@@ -332,7 +345,7 @@ export function Conditions() {
                   },
                 }}
               >
-                39.000 AMD
+                39.000 ֏
               </Typography>
               <Typography
                 variant="body1"
@@ -347,7 +360,8 @@ export function Conditions() {
                   },
                 }}
               >
-                Discounted monthly price for those who have finished serving in army no more thanone year ago.
+                {/* Discounted monthly price for those who have finished serving in army no more thanone year ago. */}
+                Դասընթացների ամսեկան գին բանակից 1 տարվա ընթացքում զորացրվածների համաև։
               </Typography>
             </Price>
             <Price>
@@ -364,7 +378,7 @@ export function Conditions() {
                   },
                 }}
               >
-                29.000 AMD
+                29.000 ֏
               </Typography>
               <Typography
                 variant="body1"
@@ -379,8 +393,9 @@ export function Conditions() {
                   },
                 }}
               >
-                Monthly discounted price for our war heros,their children and soldiers just finished serving in army.
-                Army ticket scan is required to be sent to our e-mail address.
+                {/* Monthly discounted price for our war heros,their children and soldiers just finished serving in army.
+                Army ticket scan is required to be sent to our e-mail address. */}
+                Դասընթացների ամսեկան գինը 2020 թ-ի պատերազմի մասնակիցների և իրենց երեխաների համար։
               </Typography>
             </Price>
           </div>
