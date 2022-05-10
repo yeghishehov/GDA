@@ -79,8 +79,6 @@ export const Image = styled(Box)`
   background-size: cover;
   background-position: center;
   flex-grow: 1;
-  // margin: 10px auto;
-  // width: 90%;
   position: absolute;
   left: 0;
   right: 0;
@@ -110,7 +108,6 @@ export const Gradient = styled("div")`
     right: 0;
     left: 0;
     bottom: 0;
-    // height: 100vh;
     z-index: -1;
 `;
 
@@ -236,10 +233,6 @@ export const CourseIcon = styled("img")`
 
 export const EvolutionImage = styled("img")`
   width: 75%;
-  // position: absolute;
-  // left: 50%;
-  // bottom: 0;
-  // transform: translateX(-50%);
   opacity: 0.7;
 `;
 

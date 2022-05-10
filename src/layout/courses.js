@@ -37,7 +37,7 @@ const overviews = {
     "AI",
     "Optimization",
     "Practice, teamworks and homeworks",
-    "And much more",
+    "և շատ ավելին",
   ],
   "Unity 3D": [
     // "Comming Soon",

@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { Box /* , Typography */ } from "@mui/material";
+import { Box } from "@mui/material";
 
 export const BoxSC = styled(Box)`
   user-select: none;
@@ -10,7 +10,6 @@ export const BoxSC = styled(Box)`
 `;
 
 export const HeaderSC = styled("div")`
-  /* font-family: "AzonixRegular";
   font-size: 7.8vw;
   line-height: 100%;
   font-weight: 500;

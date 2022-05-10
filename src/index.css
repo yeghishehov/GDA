@@ -10,7 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #DBDEE3;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
 }
 
 code {
