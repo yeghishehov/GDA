@@ -50,7 +50,7 @@ export function Banner() {
   const [fireTimeoutId, setFireTimeoutId] = useState(null);
   const [mesTimeoutId, setMesTimeoutId] = useState(null);
   const [finTimeoutId, setFinTimeoutId] = useState(null);
-  const [score, setScore] = useState(98);
+  const [score, setScore] = useState(-3);
   const [scoreFinished, setScoreFinished] = useState(false);
   const [message, setMessage] = useState("");
   const fireworks = useRef(null);
