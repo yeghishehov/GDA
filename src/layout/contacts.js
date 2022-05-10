@@ -4,6 +4,15 @@ import { Grid, Box, Typography } from "@mui/material";
 import { ContainerSC, ContentSC } from "./mui";
 import mapMob from "../assets/images/map-m.png";
 import mapDesk from "../assets/images/map-d.png";
+import fbImg from "../assets/images/social-baners/fbIcon.png";
+import instaImg from "../assets/images/social-baners/instaIcon.png";
+import tiktokImg from "../assets/images/social-baners/tiktokIcon.png";
+
+const links = [
+  { key: 1, href: "https://www.facebook.com/gamedevelopmentacademyarmenia", img: fbImg },
+  { key: 2, href: "https://www.instagram.com/gamedevelopmentacademy", img: instaImg },
+  { key: 3, href: "https://www.tiktok.com/@gamedevelopmentacademy", img: tiktokImg },
+];
 
 export function Contacts() {
   const isMobile = useMediaQuery("(max-width:900px)");
@@ -53,6 +62,15 @@ export function Contacts() {
             >
               info@gda.am
             </a>
+          </Grid>
+          <Grid container mt={3} sx={{ width: "60%" }}>
+            {links.map(({ key, href, img }) => (
+              <Grid key={key} item xs={2} sm={2} md={1} lg={1}>
+                <a href={href}>
+                  <img src={img} alt="" width="80%" />
+                </a>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
         <Box sx={{

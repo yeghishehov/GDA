@@ -17,12 +17,12 @@ import {
 } from "./mui";
 
 const buttons = [
-  { id: "about", text: "Ինչ է Game Dev-ը" },
-  { id: "our mission", text: "Մեր առաքելությունը" },
-  { id: "contacts", text: "Կոնտակտներ" },
   { id: "courses", text: "Դասընթացներ" },
   { id: "conditions", text: "Պայմաններ" },
+  { id: "about", text: "Ինչ է Game Dev-ը" },
+  { id: "our mission", text: "Մեր առաքելությունը" },
   { id: "faq", text: "ՀՏՀ" },
+  { id: "contacts", text: "Կոնտակտներ" },
 ];
 
 export function Banner() {

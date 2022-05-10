@@ -26,17 +26,17 @@ export function Contacts() {
           </a>
         </Grid>
         <Grid item xs={6} sm={6} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-          <a href="https://www.facebook.com/gamedevelopmentacademyarmenia/">
+          <a href="https://www.facebook.com/gamedevelopmentacademyarmenia">
             <Image src={fbImg} />
           </a>
         </Grid>
         <Grid item xs={6} sm={6} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-          <a href="https://www.gda.am/">
+          <a href="https://www.gda.am">
             <Image src={gdaImg} reverse />
           </a>
         </Grid>
         <Grid item xs={6} sm={6} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-          <a href="https://www.instagram.com/gamedevelopmentacademy/">
+          <a href="https://www.instagram.com/gamedevelopmentacademy">
             <Image src={instaImg} reverse />
           </a>
         </Grid>
