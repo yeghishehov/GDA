@@ -17,7 +17,7 @@ const links = [
 export function Contacts() {
   const isMobile = useMediaQuery("(max-width:900px)");
   return (
-    <ContentSC id="contacts">
+    <ContentSC id="contacts" sx={{ overflow: "hidden" }}>
       <ContainerSC>
         <Typography
           variant="h2"
@@ -75,7 +75,7 @@ export function Contacts() {
         </Grid>
         <Box sx={{
           position: "absolute",
-          top: "50%",
+          top: isMobile ? "70%" : "55%",
           right: 10,
           transform: "translateY(-50%)",
           display: "flex",
@@ -83,7 +83,7 @@ export function Contacts() {
           zIndex: -1,
         }}
         >
-          <img src={isMobile ? mapMob : mapDesk} alt="" width={isMobile ? "98%" : "80%"} />
+          <img src={isMobile ? mapMob : mapDesk} alt="" width={isMobile ? "98%" : "90%"} />
         </Box>
         <Box sx={{
           padding: "20px 0px",

@@ -242,3 +242,11 @@ export const EvolutionImage = styled("img")`
   // transform: translateX(-50%);
   opacity: 0.7;
 `;
+
+export const FireworksContainer = styled("div")`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+`;
