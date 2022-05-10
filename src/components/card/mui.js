@@ -99,7 +99,7 @@ export const CardHeaderSC = styled(Typography)`
   text-align: center;
   z-index: 1;
   color: #727072;
-  font-family: "Montserrat", "Brutal-Regular";
+  font-family: "Montserrat", "Brutal-Regular", sans-serif;
   @media (max-width: 770px) {
     font-size: 1.3rem;
   }
@@ -113,7 +113,7 @@ export const CardHeaderSC = styled(Typography)`
 
 export const CardContentSC = styled(CardContent)`
   flex: 0 0 auto;
-  font-family: "Brutal-Regular";
+  font-family: "Brutal-Regular", sans-serif;
   z-index: 1;
   padding-top: 5px;
   text-align: center;

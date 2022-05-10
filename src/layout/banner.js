@@ -4,9 +4,9 @@ import Box from "@mui/material/Box";
 import MenuIcon from "@mui/icons-material/Menu";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import logo from "../assets/images/logo.svg";
-import { Header } from "../components/header";
+import { BannerImage } from "../components/bannerImage";
 import { ParticlesBackground } from "../components/particles";
-import { Description } from "../components/description";
+// import { Description } from "../components/description";
 import {
   ContainerHeaderSC,
   ContainerHeaderFixSC,
@@ -17,12 +17,12 @@ import {
 } from "./mui";
 
 const buttons = [
-  "about",
-  "our mission",
-  "courses",
-  "conditions",
-  // "registration",
-  "faq",
+  { id: "about", text: "Ինչ է Game Dev-ը" },
+  { id: "our mission", text: "Մեր առաքելությունը" },
+  { id: "contacts", text: "Կոնտակտներ" },
+  { id: "courses", text: "Դասընթացներ" },
+  { id: "conditions", text: "Պայմաններ" },
+  { id: "faq", text: "ՀՏՀ" },
 ];
 
 export function Banner() {
@@ -57,13 +57,16 @@ export function Banner() {
         />
         {buttons.map((button) => (
           <ButtonSC
-            key={button}
+            key={button.id}
             variant="text"
             size="large"
-            name={button}
+            name={button.id}
             onClick={smoothScroll}
+            sx={{
+              textTransform: "capitalize",
+            }}
           >
-            {button}
+            {button.text}
           </ButtonSC>
         ))}
         <ButtonSC
@@ -72,14 +75,15 @@ export function Banner() {
           onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
           reg="true"
         >
-          Enroll Now
+          {/* Enroll Now */}
+          Դիմել հիմա
         </ButtonSC>
       </MobileDrawerWrapper>
 
       <ContainerHeaderSC>
         <NavigationSC />
-        <Header />
-        <Description />
+        <BannerImage />
+        {/* <Description /> */}
       </ContainerHeaderSC>
     </ContentSC>
   );
@@ -133,7 +137,8 @@ function MobileDrawerWrapper({ smoothScroll, children }) {
             onClick={() => window.open("https://forms.gle/GYcdPGm95djBGnDJA")}
             reg="true"
           >
-            Enroll Now
+            {/* Enroll Now */}
+            Դիմել հիմա
           </ButtonSC>
           <MenuIcon
             color="primary"

@@ -5,17 +5,19 @@ import { Courses } from "./courses";
 import { Conditions } from "./conditions";
 // import { Registration } from "./registration";
 import { Faq } from "./faq";
+import { Contacts } from "./contacts";
 
 export function Layout() {
   return (
     <>
       <Banner />
-      <About />
-      <Mission />
       <Courses />
       <Conditions />
+      <About />
+      <Mission />
       {/* <Registration /> */}
       <Faq />
+      <Contacts />
     </>
   );
 }

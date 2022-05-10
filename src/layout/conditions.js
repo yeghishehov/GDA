@@ -23,7 +23,7 @@ export function Conditions() {
           {/* <DividerSC /> */}
           <Typography
             variant="h2"
-            fontFamily="Brutal-Regular"
+            fontFamily="Brutal-Regular,sans-serif"
             color="#fff"
             align="center"
             mt={5}
@@ -43,7 +43,7 @@ export function Conditions() {
             <Typography
               variant="h4"
               align="left"
-              fontFamily="Brutal-Regular"
+              fontFamily="Brutal-Regular,sans-serif"
               color="#fff"
               sx={{
                 fontSize: {
@@ -60,7 +60,7 @@ export function Conditions() {
               <Typography
                 variant="h6"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#ffee33"
                 sx={{
                   fontSize: {
@@ -70,13 +70,13 @@ export function Conditions() {
                   },
                 }}
               >
-                Տեւողությունը
+                Տևողությունը
                 {/* Duration */}
               </Typography>
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {
@@ -94,7 +94,7 @@ export function Conditions() {
               <Typography
                 variant="h6"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#ffee33"
                 sx={{
                   fontSize: {
@@ -110,7 +110,7 @@ export function Conditions() {
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {
@@ -128,7 +128,7 @@ export function Conditions() {
               <Typography
                 variant="h6"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#ffee33"
                 sx={{
                   fontSize: {
@@ -144,7 +144,7 @@ export function Conditions() {
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {
@@ -168,7 +168,7 @@ export function Conditions() {
                 <Typography
                   variant="h6"
                   align="center"
-                  fontFamily="Brutal-Regular"
+                  fontFamily="Brutal-Regular,sans-serif"
                   color="#ffee33"
                   sx={{
                     fontSize: {
@@ -185,7 +185,7 @@ export function Conditions() {
                 </Typography>
                 <Typography
                   align="center"
-                  fontFamily="Brutal-Regular"
+                  fontFamily="Brutal-Regular,sans-serif"
                   color="#c1b425"
                   sx={{
                     fontSize: {
@@ -204,7 +204,7 @@ export function Conditions() {
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {
@@ -226,7 +226,7 @@ export function Conditions() {
                 <Typography
                   variant="h6"
                   align="center"
-                  fontFamily="Brutal-Regular"
+                  fontFamily="Brutal-Regular,sans-serif"
                   color="#ffee33"
                   sx={{
                     fontSize: {
@@ -242,7 +242,7 @@ export function Conditions() {
                 </Typography>
                 <Typography
                   align="center"
-                  fontFamily="Brutal-Regular"
+                  fontFamily="Brutal-Regular,sans-serif"
                   color="#c1b425"
                   sx={{
                     fontSize: {
@@ -260,7 +260,7 @@ export function Conditions() {
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {
@@ -283,7 +283,7 @@ export function Conditions() {
                 <Typography
                   variant="h6"
                   align="center"
-                  fontFamily="Brutal-Regular"
+                  fontFamily="Brutal-Regular,sans-serif"
                   color="#ffee33"
                   sx={{
                     fontSize: {
@@ -299,7 +299,7 @@ export function Conditions() {
                 </Typography>
                 <Typography
                   align="center"
-                  fontFamily="Brutal-Regular"
+                  fontFamily="Brutal-Regular,sans-serif"
                   color="#c1b425"
                   sx={{
                     fontSize: {
@@ -317,7 +317,7 @@ export function Conditions() {
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {
@@ -335,7 +335,7 @@ export function Conditions() {
               <Typography
                 variant="h6"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#ffee33"
                 sx={{
                   fontSize: {
@@ -350,7 +350,7 @@ export function Conditions() {
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {
@@ -361,14 +361,14 @@ export function Conditions() {
                 }}
               >
                 {/* Discounted monthly price for those who have finished serving in army no more thanone year ago. */}
-                Դասընթացների ամսեկան գին բանակից 1 տարվա ընթացքում զորացրվածների համաև։
+                Դասընթացների ամսեկան գին բանակից 1 տարվա ընթացքում զորացրվածների համար։
               </Typography>
             </Price>
             <Price>
               <Typography
                 variant="h6"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#ffee33"
                 sx={{
                   fontSize: {
@@ -383,7 +383,7 @@ export function Conditions() {
               <Typography
                 variant="body1"
                 align="center"
-                fontFamily="Brutal-Regular"
+                fontFamily="Brutal-Regular,sans-serif"
                 color="#fff"
                 sx={{
                   fontSize: {

@@ -80,7 +80,7 @@ export function Faq() {
         <Typography
           variant="h2"
           align="center"
-          fontFamily="Brutal-Regular"
+          fontFamily="Brutal-Regular,sans-serif"
           color="#fff"
           mt={5}
           mb={6}
@@ -98,7 +98,7 @@ export function Faq() {
         {/* <Typography
           variant="h6"
           align="center"
-          fontFamily="Brutal-Regular"
+          fontFamily="Brutal-Regular,sans-serif"
           color="#fff"
           mb={4}
           sx={{
@@ -111,7 +111,7 @@ export function Faq() {
         >
           Helpful Information
         </Typography> */}
-        <PriceContainerSC sx={{ mb: 20 }}>
+        <PriceContainerSC sx={{ mb: 5 }}>
           {faq.map((f) => (
             <AccordionSC key={f.id} expanded={expanded === f.id} onChange={handleChange(f.id)}>
               <AccordionSummarySC
@@ -119,7 +119,7 @@ export function Faq() {
                 id={f.id}
               >
                 <Typography
-                  fontFamily="Brutal-Regular"
+                  fontFamily="Brutal-Regular,sans-serif"
                   color="#ffee33"
                   sx={{
                     fontSize: {
@@ -137,7 +137,7 @@ export function Faq() {
                   <Typography
                     // eslint-disable-next-line react/no-array-index-key
                     key={index}
-                    fontFamily="Brutal-Regular"
+                    fontFamily="Brutal-Regular,sans-serif"
                     color="#fff"
                     mb={4}
                     sx={{

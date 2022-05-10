@@ -18,15 +18,15 @@ export const ContainerSC = styled(Container)`
 `;
 
 export const ContainerHeaderSC = styled(ContainerSC)`
-  justify-content: space-between;
-  height: 90vh;
+  justify-content: center;
+  height: 100vh;
 `;
 
 export const ContainerHeaderFixSC = styled(Container)`
   display: flex;
   justify-content: space-around;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 `;
 
 export const NavigationSC = styled(Box)`
@@ -110,7 +110,7 @@ export const Gradient = styled("div")`
     right: 0;
     left: 0;
     bottom: 0;
-    height: 100vh;
+    // height: 100vh;
     z-index: -1;
 `;
 
@@ -232,4 +232,13 @@ export const IframeSC = styled("iframe")`
 export const CourseIcon = styled("img")`
     width: 20px;
     margin-right: 10px;
+`;
+
+export const EvolutionImage = styled("img")`
+  width: 75%;
+  // position: absolute;
+  // left: 50%;
+  // bottom: 0;
+  // transform: translateX(-50%);
+  opacity: 0.7;
 `;

@@ -9,7 +9,9 @@ import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
 import question from "../assets/images/question.png";
 import UELogo from "../assets/images/UE_Logo1.png";
-import UELogoBlack from "../assets/images/UE_Logo.png";
+// import UELogoBlack from "../assets/images/UE_Logo.png";
+import dotImg from "../assets/images/dot.png";
+// import arrowImg from "../assets/images/arrow.png";
 import unityLogo from "../assets/images/unity.png";
 import unityBlackLogo from "../assets/images/unity-black.png";
 import { Card } from "../components/card";
@@ -43,7 +45,7 @@ const overviews = {
   ],
 };
 const icons = {
-  "Unreal Engine": UELogoBlack,
+  "Unreal Engine": dotImg, // arrowImg, // UELogoBlack,
   "Unity 3D": unityBlackLogo,
 };
 
@@ -69,7 +71,7 @@ export function Courses() {
           align="center"
           mt={5}
           mb={2}
-          fontFamily="Brutal-Regular"
+          fontFamily="Brutal-Regular,sans-serif"
           sx={{
             fontSize: {
               md: "3.45rem",
@@ -145,7 +147,7 @@ export function Courses() {
             <Typography
               variant="h4"
               component="h2"
-              fontFamily="Brutal-Regular"
+              fontFamily="Brutal-Regular,sans-serif"
               sx={{
                 fontSize: {
                   md: "2rem",

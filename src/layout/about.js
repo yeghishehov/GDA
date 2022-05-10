@@ -9,10 +9,12 @@ import {
 const aboutTitle = "Ի՞նչ է Game Development-ը։";
 // const about = `Game developers design, create and produce video games. They work in game development teams with artists, programmers, producers and marketing staff.
 // Game developers usually specialize in a particular game platform (PlayStation, Xbox, Mobile (IOS or Android), PC for example) and a particular aspect of game development, such as programming artificial intelligence or game play. Specialization is common in the industry, although games developers sometimes perform a combination of roles.`;
-const about = `Game developer-ները նախագծում և ստեղծում են վիդեո խաղեր։ Նրանք աշխատում են թիմերով, որոնք իր մեջ ներառում են\` դերասաններ, ծրագրավորողներ,պրոդյուսերներ և մարկետինգի մասնագետներ։
+const about = `Game developer-ները նախագծում և ստեղծում են վիդեո խաղեր։
+Նրանք աշխատում են թիմերով, որոնք իրենց մեջ ներառում են\` դերասաններ, ծրագրավորողներ,պրոդյուսերներ և մարկետինգի
+մասնագետներ։
 Game Developer-ները հիմնականում մասնագիտանում են կոնկրետ խաղային հարթակներում (օրինակ\` PC, PlayStation, Xbox, Mobile\` IOS կամ Android), և հատուկ ուղղություններում, ինչպիսիք են՝ ծրագրավորում, արհեստական բանականություն, խաղային ընթացք և այլն։
 Որոշ դեպքերում խաղերի ստեղծման ժամանակ Game Developer-ները համատեղում են միաժամանակ մի քանի աշխատանք։`;
-const aboutTitle2 = "Ինչու՞ ընտրել խաղերի ստողծման ոլորտը";
+const aboutTitle2 = "Ինչու՞ ընտրել խաղերի ստեղծման ոլորտը";
 const about2 = `Միգուցե այն պատճառով, որ դա կարիերա է, որն իր մեջ ներառում է գերժամանակակից տեխնոլոգիաներ և կրեատիվության համադրություն։
 Դա կարող է լինել նաև այն պատճառով, որ դուք սիրում եք խաղալ վիդեո խաղեր և ցանկանում եք կյանքի վերածել Ձեր կրեատիվ մտքերը։
 Միգուցե դուք ցանկանու՞մ եք այնպիսի կարիերա, որը հնարավորություն կտա աշխատել ճանապարհորդության ընթացքում կամ տանից։ Միգուցե դուք սիրու՞մ եք նկարչությունը և իրերի կերտումը Ձեր իսկ ձեռքով վիրտուալ հարթակի միջոցով։`;
@@ -39,7 +41,7 @@ export function About() {
             align="center"
             mb={2}
             mt={5}
-            fontFamily="Brutal-Regular"
+            fontFamily="Brutal-Regular,sans-serif"
             sx={{
               // color: "#fff",
               fontSize: {
@@ -54,7 +56,7 @@ export function About() {
           <Typography
             variant="h5"
             align="center"
-            fontFamily="Brutal-Regular"
+            fontFamily="Brutal-Regular,sans-serif"
             sx={{
               // color: "#fff",
               fontSize: {
@@ -72,13 +74,13 @@ export function About() {
             align="center"
             mb={2}
             mt={8}
-            fontFamily="Brutal-Regular"
+            fontFamily="Brutal-Regular,sans-serif"
             sx={{
               // color: "#fff",
               fontSize: {
-                md: "2.5rem",
-                sm: "1.8rem",
-                xs: "1.3rem",
+                md: "3.45rem",
+                sm: "2.75rem",
+                xs: "1.5rem",
               },
             }}
           >
@@ -87,7 +89,7 @@ export function About() {
           <Typography
             variant="h5"
             align="center"
-            fontFamily="Brutal-Regular"
+            fontFamily="Brutal-Regular,sans-serif"
             sx={{
               // color: "#fff",
               fontSize: {
@@ -102,7 +104,7 @@ export function About() {
           <Typography
             variant="h5"
             align="center"
-            fontFamily="Brutal-Regular"
+            fontFamily="Brutal-Regular,sans-serif"
             mb={4}
             sx={{
               // color: "#fff",
