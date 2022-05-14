@@ -13,7 +13,7 @@ import {
 } from "./mui";
 
 // const pricesTitle = "Conditions of education";
-const pricesTitle = "Կրթության պայմանները";
+const pricesTitle = "Պայմաններ";
 
 export function Conditions() {
   return (

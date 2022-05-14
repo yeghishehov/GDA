@@ -16,9 +16,8 @@ const about2Title = "Մեր առաքելությունը";
 // We are eager to lead students, spread the famous Armenian creator's
 // reputation all over the world also in game development, and open the new opportunities for our homeland.`;
 const about2 = `Մեր առաքելությունն է Հայաստանում հիմնել որակյալ կրթական հաստատություն, որտեղ հայ երիտասարդները
-կկարողանան սովորել ստեղծել բարձրորակ վիդեո խաղեր Mobile\` IOS, Indroid, Desktop և Console\` Playstation, Xbox և այլ հարթակների համար: Մենք պատրաստ ենք
-առաջնորդել ուսանողներին զարգացնել ստեղծագործ միտքը խաղերի ոլորտում և նոր հնարավորություններ բացել երիտասարդների
-համար:`;
+կկարողանան սովորել ստեղծել բարձրորակ վիդեո խաղեր Mobile\` IOS, Android, Desktop և Console\` Playstation, Xbox և այլ հարթակների համար:
+Մենք պատրաստ ենք առաջնորդել ուսանողներին զարգացնել ստեղծագործ միտքը խաղերի ստեղծման ոլորտում և նոր հնարավորություններ բացել երիտասարդների համար:`;
 
 export function Mission() {
   const isMobile = useMediaQuery("(max-width:900px)");

@@ -4,8 +4,15 @@ import { Box } from "@mui/material";
 export const BoxSC = styled(Box)`
   user-select: none;
   pointer-events: none;
+  display: flex;
+  justify-content: center;
   & img {
-    width: 100%;
+    width: 80%;
+  }
+  @media (max-width: 960px) {
+    & img {
+      width: 100%;
+    }
   }
 `;
 
