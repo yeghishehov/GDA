@@ -81,6 +81,7 @@ export function Contacts() {
           display: "flex",
           justifyContent: "flex-end",
           zIndex: -1,
+          height: "100%",
         }}
         >
           <img src={isMobile ? mapMob : mapDesk} alt="" width={isMobile ? "98%" : "90%"} />
