@@ -197,7 +197,7 @@ export function Banner() {
       <MobileDrawerWrapper smoothScroll={smoothScroll}>
         <img
           src={logo}
-          alt=""
+          alt="logo"
           width={44}
           name="home"
           onClick={smoothScroll}
@@ -269,7 +269,7 @@ function MobileDrawerWrapper({ smoothScroll, children }) {
       <NavigationFixSC background={isFixNav}>
         <img
           src={logo}
-          alt=""
+          alt="logo"
           width={44}
           name="home"
           onClick={smoothScroll}

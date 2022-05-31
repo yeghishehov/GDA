@@ -68,7 +68,7 @@ export function Mission() {
         </Typography>
       </ContainerSC>
       <BGImage src={img1} />
-      <EvolutionImage src={isMobile ? bannerImg1 : bannerImg} alt="" sx={{ mt: 3, width: isMobile ? "100%" : "75%" }} />
+      <EvolutionImage src={isMobile ? bannerImg1 : bannerImg} alt="games evolution" sx={{ mt: 3, width: isMobile ? "100%" : "75%" }} />
       <Gradient />
       <Gradient2 />
     </ContentSC>

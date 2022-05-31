@@ -163,7 +163,7 @@ export function Courses() {
                 {overview.slice(0, Math.round(overview.length / 2)).map((item) => (
                   <ListItem key={item}>
                     {/* <AddIcon sx={{ mr: 1 }} /> */}
-                    <CourseIcon src={icons[selectedCourse]} alt="" />
+                    <CourseIcon src={icons[selectedCourse]} alt="course icon" />
                     <ListItemText
                       primary={item}
                       secondary=""
@@ -183,7 +183,7 @@ export function Courses() {
               <List sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 {overview.slice(Math.round(overview.length / 2), overview.length).map((item) => (
                   <ListItem key={item}>
-                    <CourseIcon src={icons[selectedCourse]} alt="" />
+                    <CourseIcon src={icons[selectedCourse]} alt="course icon" />
                     {/* <AddIcon sx={{ mr: 1 }} /> */}
                     <ListItemText
                       primary={item}

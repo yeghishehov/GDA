@@ -67,7 +67,7 @@ export function Contacts() {
             {links.map(({ key, href, img }) => (
               <Grid key={key} item xs={2} sm={2} md={1} lg={1}>
                 <a href={href}>
-                  <img src={img} alt="" width="80%" />
+                  <img src={img} alt="social icon" width="80%" />
                 </a>
               </Grid>
             ))}
@@ -75,16 +75,22 @@ export function Contacts() {
         </Grid>
         <Box sx={{
           position: "absolute",
-          top: isMobile ? "70%" : "55%",
-          right: 10,
-          transform: "translateY(-50%)",
+          top: isMobile ? "30%" : "55%",
+          right: isMobile ? "unset" : 10,
+          transform: isMobile ? "unset" : "translateY(-50%)",
           display: "flex",
           justifyContent: "flex-end",
           zIndex: -1,
-          height: "100%",
+          height: isMobile ? "100%" : "unset",
+          width: isMobile ? "100%" : "unset",
         }}
         >
-          <img src={isMobile ? mapMob : mapDesk} alt="" width={isMobile ? "98%" : "90%"} />
+          <img
+            src={isMobile ? mapMob : mapDesk}
+            alt="map"
+            width={isMobile ? "unset" : "90%"}
+            height={isMobile ? "65%" : "unset"}
+          />
         </Box>
         <Box sx={{
           padding: "20px 0px",
