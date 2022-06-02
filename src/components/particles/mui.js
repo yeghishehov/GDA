@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 
 export const ParticlesSC = styled("div")`
   & > * > * {
-    position: absolute;
+    position: ${({ fixed }) => (fixed ? "fixed" : "absolute")};
     left: 0;
     top: 0;
     bottom: 0;

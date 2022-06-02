@@ -27,8 +27,14 @@ const contacts = [
 
 export function Contacts() {
   return (
-    <Container>
-      <ParticlesBackground />
+    <Container sx={{
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      minHeight: "100vh",
+    }}
+    >
+      <ParticlesBackground fixed />
       <Grid
         container
         spacing={2}
@@ -48,8 +54,6 @@ export function Contacts() {
       </Grid>
       <Box sx={{
         padding: "20px 0px",
-        position: "absolute",
-        bottom: 0,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

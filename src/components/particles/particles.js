@@ -1,9 +1,9 @@
 import Particles from "react-tsparticles";
 import { ParticlesSC } from "./mui";
 
-export function ParticlesBackground() {
+export function ParticlesBackground({ fixed = false }) {
   return (
-    <ParticlesSC>
+    <ParticlesSC fixed={fixed}>
       <Particles url={`${process.env.PUBLIC_URL}/particles.json`} />
     </ParticlesSC>
   );
