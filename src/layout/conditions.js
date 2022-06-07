@@ -180,10 +180,9 @@ export function Conditions() {
                     mr: 1,
                   }}
                 >
-                  {/* 39.000 AMD */}
-                  39.000 ֏
+                  69.000 ֏
                 </Typography>
-                <Typography
+                {/* <Typography
                   align="center"
                   fontFamily="Brutal-Regular,sans-serif"
                   color="#c1b425"
@@ -197,9 +196,8 @@ export function Conditions() {
                     display: "inline-block",
                   }}
                 >
-                  {/* 69.000 AMD */}
                   69.000 ֏
-                </Typography>
+                </Typography> */}
               </Box>
               <Typography
                 variant="body1"
@@ -238,9 +236,9 @@ export function Conditions() {
                     mr: 1,
                   }}
                 >
-                  39.000 ֏
+                  59.000 ֏
                 </Typography>
-                <Typography
+                {/* <Typography
                   align="center"
                   fontFamily="Brutal-Regular,sans-serif"
                   color="#c1b425"
@@ -255,7 +253,7 @@ export function Conditions() {
                   }}
                 >
                   59.000 ֏
-                </Typography>
+                </Typography> */}
               </Box>
               <Typography
                 variant="body1"
@@ -272,10 +270,12 @@ export function Conditions() {
               >
                 {/* Monthly discounted price for all kind of artists (3D modellers, painters, musicians etc…)
                 and programmers. A link to the portfolio is required to be sent to our e-mail address. */}
-                Դասընթացների ամսեկան գինը արվեստագետների և ծրագրավորողների համար։
+                {/* Discounted monthly price for all students. Student card is required to be sent to our e-mail address. */}
+                Դասընթացների ամսեկան արժեքը արվեստագետների, ծրագրավորողների և ուսանողների համար։
+                Ուսանողական քարտը պետք է ուղարկել info@gda.am էլ․ հասցեյին նշելով անունը և ազգանունը։
               </Typography>
             </Price>
-            <Price>
+            {/* <Price>
               <Box sx={{
                 display: "flex", justifyContent: "center", alignItems: "flex-end", width: "100%",
               }}
@@ -328,10 +328,10 @@ export function Conditions() {
                 }}
               >
                 {/* Discounted monthly price for all students. Student card is required to be sent to our e-mail address. */}
-                Դասընթացների ամսեկան գինը ուսանողների համար։ Ուսանողական քարտը պետք է ուղարկել info@gda.am էլ․ հասցեյին նշելով անունը և ազգանունը։
-              </Typography>
-            </Price>
-            <Price>
+            {/* Դասընթացների ամսեկան գինը ուսանողների համար։ Ուսանողական քարտը պետք է ուղարկել info@gda.am էլ․ հասցեյին նշելով անունը և ազգանունը։ */}
+            {/* </Typography>
+            </Price> */}
+            {/* <Price>
               <Typography
                 variant="h6"
                 align="center"
@@ -361,9 +361,9 @@ export function Conditions() {
                 }}
               >
                 {/* Discounted monthly price for those who have finished serving in army no more thanone year ago. */}
-                Դասընթացների ամսեկան գին բանակից 1 տարվա ընթացքում զորացրվածների համար։
-              </Typography>
-            </Price>
+            {/* Դասընթացների ամսեկան գին բանակից 1 տարվա ընթացքում զորացրվածների համար։ */}
+            {/* </Typography> */}
+            {/* </Price> */}
             <Price>
               <Typography
                 variant="h6"
@@ -378,7 +378,7 @@ export function Conditions() {
                   },
                 }}
               >
-                29.000 ֏
+                49.000 ֏
               </Typography>
               <Typography
                 variant="body1"
@@ -395,7 +395,7 @@ export function Conditions() {
               >
                 {/* Monthly discounted price for our war heros,their children and soldiers just finished serving in army.
                 Army ticket scan is required to be sent to our e-mail address. */}
-                Դասընթացների ամսեկան գինը 2020 թ-ի պատերազմի մասնակիցների և իրենց երեխաների համար։
+                Դասընթացների ամսեկան արժեքը 2020 թ-ի պատերազմի մասնակիցների և իրենց երեխաների համար։
               </Typography>
             </Price>
           </div>

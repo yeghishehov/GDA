@@ -37,7 +37,7 @@ const overviews = {
     "AI",
     "Optimization",
     "Practice, teamworks and homeworks",
-    "և շատ ավելին",
+    "And much more",
   ],
   "Unity 3D": [
     // "Comming Soon",
@@ -119,6 +119,7 @@ export function Courses() {
             // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
+            disabled
           />
           <Card
             logo={question}
@@ -126,6 +127,7 @@ export function Courses() {
             // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
+            disabled
           />
           <Card
             logo={question}
@@ -133,6 +135,7 @@ export function Courses() {
             // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
+            disabled
           />
           <Card
             logo={question}
@@ -140,6 +143,7 @@ export function Courses() {
             // title="coming soon"
             // content="coming soon"
             gradient="to right, #858585, #858585"
+            disabled
           />
         </CoursesSC>
         <Modal open={open} onClose={handleClose}>

@@ -20,7 +20,7 @@ export const CardSC = styled(Card)`
   box-sizing: border-box;
   opacity: 0.85;
   background: linear-gradient(${({ gradient }) => gradient});
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
   transition: .7s;
   &::before {
     content: "";
