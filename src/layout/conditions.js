@@ -272,7 +272,7 @@ export function Conditions() {
                 and programmers. A link to the portfolio is required to be sent to our e-mail address. */}
                 {/* Discounted monthly price for all students. Student card is required to be sent to our e-mail address. */}
                 Դասընթացների ամսեկան արժեքը արվեստագետների, ծրագրավորողների և ուսանողների համար։
-                Ուսանողական քարտը պետք է ուղարկել info@gda.am էլ․ հասցեյին նշելով անունը և ազգանունը։
+                Ուսանողական քարտը պետք է ուղարկել info@gda.am էլ․ հասցեին նշելով անունը և ազգանունը։
               </Typography>
             </Price>
             {/* <Price>
