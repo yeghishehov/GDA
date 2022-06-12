@@ -11,5 +11,5 @@ const move = keyframes`
 
 export const Image = styled("img")`
   width: 100%;
-  animation: ${move} 1.5s ease-in-out ${({ reverse }) => (reverse ? "alternate-reverse" : "alternate")} infinite;
+  animation: ${move} 1.5s ease-in-out ${({ reverse }) => (reverse === "true" ? "alternate-reverse" : "alternate")} infinite;
 `;

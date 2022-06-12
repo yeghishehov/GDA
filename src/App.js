@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { VFXProvider } from "react-vfx";
+import {
+  Routes, Route, useLocation, Navigate,
+} from "react-router-dom";
 import { Layout } from "./layout";
 import { PrivacyPolicy } from "./pages/privacyPolicy";
 import { Contacts } from "./pages/contacts";
@@ -16,9 +17,10 @@ function App() {
   useScrollToTop();
   return (
     <Routes>
+      <Route path="/" element={<Layout />} />
       <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/CHOOSEYOURDESTINation" element={<Contacts />} />
-      <Route path="*" element={<VFXProvider><Layout /></VFXProvider>} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

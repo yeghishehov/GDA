@@ -3,7 +3,7 @@ import { ParticlesSC } from "./mui";
 
 export function ParticlesBackground({ fixed = false }) {
   return (
-    <ParticlesSC fixed={fixed}>
+    <ParticlesSC fixed={fixed.toString()}>
       <Particles url={`${process.env.PUBLIC_URL}/particles.json`} />
     </ParticlesSC>
   );

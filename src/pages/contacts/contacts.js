@@ -43,11 +43,11 @@ export function Contacts() {
         alignItems="center"
       >
         {contacts.map(({
-          id, href, img, reverse,
+          id, href, img, reverse = false,
         }) => (
           <Grid key={id} item xs={6} sm={6} md={6} sx={{ display: "flex", justifyContent: "center" }}>
             <a href={href}>
-              <Image src={img} reverse={reverse} />
+              <Image src={img} reverse={reverse.toString()} />
             </a>
           </Grid>
         ))}
