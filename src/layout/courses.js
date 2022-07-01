@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 // import AddIcon from "@mui/icons-material/Add";
@@ -23,40 +24,53 @@ import {
 // const coursesTitle = "Lesson classes";
 const coursesTitle = "Բոլոր դասընթացները";
 // const courses = "Choosing the game engine is one of the first steps of starting development.";
-const overviews = {
-  "Unreal Engine": [
-    "Introduction to engine",
-    "Coordinates, Transforms, Units, and Organization",
-    "Applying Lighting and Rendering",
-    "Creating and Using Materials",
-    "Using Audio Systems",
-    "Creating Landscapes and Foliage",
-    "Using Static and Skeletal Meshes",
-    "Cinematic",
-    "Animations",
-    "AI",
-    "Optimization",
-    "Practice, teamworks and homeworks",
-    "And much more",
-  ],
-  "Unity 3D": [
-    // "Comming Soon",
-    "Շուտով",
-  ],
-};
+// const over`views = {
+//   "Unreal Engine": [
+//     "Introduction to engine",
+//     "Coordinates, Transforms, Units, and Organization",
+//     "Applying Lighting and Rendering",
+//     "Creating and Using Materials",
+//     "Using Audio Systems",
+//     "Creating Landscapes and Foliage",
+//     "Using Static and Skeletal Meshes",
+//     "Cinematic",
+//     "Animations",
+//     "AI",
+//     "Optimization",
+//     "Practice, teamworks and homeworks",
+//     "And much more",
+//   ],
+//   "Unity 3D": [
+//     "Introduction to engine",
+//     "Coordinates, Transforms, Units, and Organization",
+//     "Applying Lighting and Rendering",
+//     "Creating and Using shaders",
+//     "Using Audio Systems",
+//     "Creating Terrain",
+//     "Using Static and Skeletal Meshes",
+//     "Cinematic",
+//     "Animations",
+//     "AI",
+//     "Optimization",
+//     "Practice, teamworks and homeworks",
+//     "And much more",
+//   ],
+// };`
 const icons = {
   "Unreal Engine": dotImg, // arrowImg, // UELogoBlack,
   "Unity 3D": unityBlackLogo,
 };
 
 export function Courses() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [overview, setOverview] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState("");
   const handleOpen = (e) => {
-    setSelectedCourse(e.currentTarget.id);
-    setOverview(overviews[e.currentTarget.id]);
-    setOpen(true);
+    // setSelectedCourse(e.currentTarget.id);
+    // setOverview(overviews[e.currentTarget.id]);
+    // setOpen(true);
+    navigate(`/course/${e.currentTarget.id}`);
   };
   const handleClose = () => {
     setSelectedCourse("");
@@ -109,7 +123,7 @@ export function Courses() {
             id="Unity 3D"
             title="Unity 3D"
             // content="coming soon"
-            content="Շուտով"
+            // content="Շուտով"
             gradient="to right, #814fd3, #ac50ce"
             onClick={handleOpen}
           />

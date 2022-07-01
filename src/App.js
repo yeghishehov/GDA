@@ -5,6 +5,7 @@ import {
 import { Layout } from "./layout";
 import { PrivacyPolicy } from "./pages/privacyPolicy";
 import { Contacts } from "./pages/contacts";
+import { Course } from "./pages/course";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -20,6 +21,7 @@ function App() {
       <Route path="/" element={<Layout />} />
       <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/CHOOSEYOURDESTINation" element={<Contacts />} />
+      <Route path="/course/:id" element={<Course />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
