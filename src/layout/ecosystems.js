@@ -1,29 +1,15 @@
 /* eslint-disable max-len */
-import { useState, useRef } from "react";
 import Typography from "@mui/material/Typography";
 import { Card } from "../components/card";
-import { courses } from "../data/Course.data";
+import { ecosystems } from "../data/Ecosystem.data";
 
-import { CourseModal } from "../components/modal";
-
-import {
-  ContentSC,
-  CoursesSC,
-  // CourseModal,
-  ContainerSC,
-  // CourseIcon,
-} from "./mui";
+import { ContentSC, CoursesSC, ContainerSC } from "./mui";
 
 const coursesTitle = "Բոլոր դասընթացները";
 
-export function Courses() {
-  const modalRef = useRef({ onOpen: () => {} });
-
-  const handleOpen = (courseInfo) => {
-    modalRef.current.onOpen(courseInfo);
-  };
+export function Ecosystems() {
   return (
-    <ContentSC id="courses" sx={{ display: "flex", flexDirection: "column" }}>
+    <ContentSC id="ecosystem" sx={{ display: "flex", flexDirection: "column" }}>
       <ContainerSC sx={{ mb: 5 }}>
         <Typography
           variant="h2"
@@ -42,24 +28,15 @@ export function Courses() {
           {coursesTitle}
         </Typography>
         <CoursesSC>
-          {courses.map((item) => (
+          {ecosystems.map((item) => (
             <Card
               logo={item.icon}
               id={item.title}
               title={item.title}
               gradient="to right, #7b91db, #7a4eda"
-              onClick={() =>
-                !item.commingSoon &&
-                item.courseData.course.length &&
-                handleOpen(item)
-              }
-              disabled={!item.courseData.course.length}
-              content={item.commingSoon ? "Շուտով" : ""}
             />
           ))}
         </CoursesSC>
-
-        <CourseModal ref={modalRef} />
       </ContainerSC>
     </ContentSC>
   );
