@@ -6,6 +6,8 @@ export const courses = [
   {
     title: "Unreal Engine",
     icon: UELogo,
+    description:
+      "Դու կկարողանաս կարճ ժամանակահատվածում անել առաջին քայլերդ դեպի աշխարհի ամենաեկամտաբեր և կրեատիվ մասնագիտությունները` համակարգչային, կոնսոլային և հեռախոսային խաղերի ստեղծման հիանալի և ստեղծագործ ոլորտում։",
     courseData: {
       course: [
         "Introduction to engine",
@@ -14,8 +16,6 @@ export const courses = [
         "Creating and Using Materials",
         "Using Audio Systems",
         "Creating Landscapes and Foliage",
-        "Using Static and Skeletal Meshes",
-        "Cinematic",
         "Animations",
         "AI",
         "Optimization",
@@ -27,35 +27,55 @@ export const courses = [
     },
   },
   {
+    title: "Concept Art",
+    description:
+      "Հենց այս մասնագետն է հանդես գալիս ապագա խաղի ընդհանուր վիզուալ հայեցակարգով, մանրամասն մշակում հերոսների կերպարներն ու խաղային միջավայրը։",
+    icon: question,
+    courseData: {
+      course: [
+        "Introduction to concept art",
+        "Adobe Illustrator",
+        "Color Theory",
+        "Color psychology",
+        "Perspective",
+        "Game UI",
+        "Adobe Photoshop",
+        "Character Design",
+        "Concepts & Theories",
+        "Environment",
+        "Composition",
+        "And much more",
+      ],
+      retgistrationURL: "",
+    },
+  },
+  {
+    title: "Asset Creation",
+    description:
+      "Սկսե՛ք ձեր 3D-արտիստի կարիերայի ուղին: Այս դասընթացը թույլ կտա ձեզ խորասուզվել ժամանակակից թվային արտադրության հսկայական աշխարհում:",
+    icon: question,
+    courseData: {
+      course: [
+        "Autodesk 3Ds Max",
+        "Modeling Objects & Character",
+        "Exterior & Interior",
+        "Texturing",
+        "Rigging",
+        "UV",
+        "Animation",
+        "Lightning",
+        "Rendering",
+        "And much more",
+      ],
+      retgistrationURL: "",
+    },
+  },
+  {
     title: "Unity 3D",
     commingSoon: true,
     icon: unityLogo,
     courseData: {
       course: ["Շուտով"],
-      retgistrationURL: "",
-    },
-  },
-  {
-    title: "Շուտով",
-    icon: question,
-    courseData: {
-      course: [],
-      retgistrationURL: "",
-    },
-  },
-  {
-    title: "Շուտով",
-    icon: question,
-    courseData: {
-      course: [],
-      retgistrationURL: "",
-    },
-  },
-  {
-    title: "Շուտով",
-    icon: question,
-    courseData: {
-      course: [],
       retgistrationURL: "",
     },
   },

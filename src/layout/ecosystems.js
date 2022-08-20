@@ -5,7 +5,7 @@ import { ecosystems } from "../data/Ecosystem.data";
 
 import { ContentSC, CoursesSC, ContainerSC } from "./mui";
 
-const coursesTitle = "Բոլոր դասընթացները";
+const coursesTitle = "Էկոհամակարգ";
 
 export function Ecosystems() {
   return (

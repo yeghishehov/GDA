@@ -1,9 +1,12 @@
-import UELogo from "../assets/images/UE_Logo1.png";
+import PartnerArarat from "../assets/images/PartnerArarat.png";
+import PartnerChip from "../assets/images/PartnerChip.png";
+import PartnerMtech from "../assets/images/PartnerMtech.png";
+import Partnernotebookcentre from "../assets/images/Partnernotebookcentre.png";
 
 export const ecosystems = [
   {
     title: "Partner 1",
-    icon: UELogo,
+    icon: PartnerArarat,
     contactInfor: {
       contacts: [],
       webSite: "",
@@ -11,15 +14,23 @@ export const ecosystems = [
   },
   {
     title: "Partner 2",
-    icon: UELogo,
+    icon: PartnerChip,
     contactInfor: {
       contacts: [],
       webSite: "",
     },
   },
   {
-    title: "Partner 2",
-    icon: UELogo,
+    title: "Partner 3",
+    icon: PartnerMtech,
+    contactInfor: {
+      contacts: [],
+      webSite: "",
+    },
+  },
+  {
+    title: "Partner 3",
+    icon: Partnernotebookcentre,
     contactInfor: {
       contacts: [],
       webSite: "",

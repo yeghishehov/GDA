@@ -25,7 +25,7 @@ export default forwardRef(({ onClose }, ref) => {
     return null;
   }
 
-  const { title, courseData } = courseItem;
+  const { title, description, courseData } = courseItem;
   const { course, retgistrationURL } = courseData;
 
   const handleClose = () => {
@@ -50,6 +50,12 @@ export default forwardRef(({ onClose }, ref) => {
         >
           {title}
         </Typography>
+
+        {!!description && (
+          <Typography component="p" fontFamily="Calibri">
+            {description}
+          </Typography>
+        )}
         <Box sx={{ display: "flex" }}>
           <List
             sx={{

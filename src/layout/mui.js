@@ -102,48 +102,49 @@ export const BGImage = styled("div")`
 `;
 
 export const Gradient = styled("div")`
-    background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(85 92 137 / 50%) 50%);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
+  background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(85 92 137 / 50%) 50%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 `;
 
 export const Gradient2 = styled("div")`
-    background: rgba(13, 16, 34, 0.6);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
+  background: rgba(13, 16, 34, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 `;
 
 export const Gradient3 = styled("div")`
-    background: #1A1A32;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: -1px;
-    z-index: -1;
+  background: #1a1a32;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: -1px;
+  z-index: -1;
 `;
 
 export const CourseModal = styled(Box)`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
-    background: #f5f1f7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    outline: none;
-    min-width: 300px;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background: #f5f1f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  outline: none;
+  min-width: 300px;
 `;
 
 export const DividerContainerSC = styled("div")`
@@ -170,7 +171,7 @@ export const Price = styled("div")`
   background: linear-gradient(to right, #9862ca, #517cd1);
   padding: 20px;
   border-radius: 20px 20px 0 20px;
-  transition: .2s;
+  transition: 0.2s;
   box-sizing: border-box;
   &:hover {
     box-shadow: 0 0 15px 5px #7171ce79;
@@ -197,13 +198,13 @@ export const ConditionsSC = styled("div")`
 `;
 
 export const Gradient4 = styled("div")`
-    background: #0F1129;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
+  background: #0f1129;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 `;
 
 export const AccordionSC = styled(Accordion)`
@@ -227,8 +228,8 @@ export const IframeSC = styled("iframe")`
 `;
 
 export const CourseIcon = styled("img")`
-    width: 20px;
-    margin-right: 10px;
+  width: 20px;
+  margin-right: 10px;
 `;
 
 export const EvolutionImage = styled("img")`
