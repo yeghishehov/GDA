@@ -26,7 +26,7 @@ export default forwardRef(({ onClose }, ref) => {
   }
 
   const { title, description, courseData } = courseItem;
-  const { course, retgistrationURL } = courseData;
+  const { course, conditions, retgistrationURL } = courseData;
 
   const handleClose = () => {
     setOpen(false);
@@ -56,64 +56,115 @@ export default forwardRef(({ onClose }, ref) => {
             {description}
           </Typography>
         )}
-        <Box sx={{ display: "flex" }}>
-          <List
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            }}
-          >
-            {course.slice(0, Math.round(course.length / 2)).map((item) => (
-              <ListItem key={item}>
-                {/* <AddIcon sx={{ mr: 1 }} /> */}
-                <CourseIcon src={dotImg} alt="course icon" />
-                <ListItemText
-                  primary={item}
-                  secondary=""
-                  primaryTypographyProps={{
-                    sx: {
-                      fontSize: {
-                        md: "1rem",
-                        sm: "0.9rem",
-                        xs: "0.6rem",
-                      },
-                    },
-                  }}
-                />
-              </ListItem>
-            ))}
-          </List>
-          <List
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            }}
-          >
-            {course
-              .slice(Math.round(course.length / 2), course.length)
-              .map((item) => (
-                <ListItem key={item}>
-                  <CourseIcon src={dotImg} alt="course icon" />
-                  {/* <AddIcon sx={{ mr: 1 }} /> */}
-                  <ListItemText
-                    primary={item}
-                    secondary=""
-                    primaryTypographyProps={{
-                      sx: {
-                        fontSize: {
-                          md: "1rem;",
-                          sm: "0.9rem",
-                          xs: "0.6rem",
+        {!!Object.keys(conditions || {}).length && (
+          <>
+            <Typography
+              variant="h4"
+              component="h4"
+              fontFamily="Brutal-Regular,sans-serif"
+            >
+              Պայմաններ
+            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                {Object.keys(conditions || {}).map((key) => (
+                  <ListItem key={key}>
+                    {/* <AddIcon sx={{ mr: 1 }} /> */}
+                    <CourseIcon src={dotImg} alt="course icon" />
+                    <ListItemText
+                      primary={`${key}: ${conditions[key]}`}
+                      secondary=""
+                      primaryTypographyProps={{
+                        sx: {
+                          fontSize: {
+                            md: "1rem",
+                            sm: "0.9rem",
+                            xs: "0.6rem",
+                          },
                         },
-                      },
-                    }}
-                  />
-                </ListItem>
-              ))}
-          </List>
-        </Box>
+                      }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
+          </>
+        )}
+        {!!course?.length && (
+          <>
+            <Typography
+              variant="h4"
+              component="h4"
+              fontFamily="Brutal-Regular,sans-serif"
+            >
+              Lesson Components
+            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                {course.slice(0, Math.round(course.length / 2)).map((item) => (
+                  <ListItem key={item}>
+                    {/* <AddIcon sx={{ mr: 1 }} /> */}
+                    <CourseIcon src={dotImg} alt="course icon" />
+                    <ListItemText
+                      primary={item}
+                      secondary=""
+                      primaryTypographyProps={{
+                        sx: {
+                          fontSize: {
+                            md: "1rem",
+                            sm: "0.9rem",
+                            xs: "0.6rem",
+                          },
+                        },
+                      }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                {course
+                  .slice(Math.round(course.length / 2), course.length)
+                  .map((item) => (
+                    <ListItem key={item}>
+                      <CourseIcon src={dotImg} alt="course icon" />
+                      {/* <AddIcon sx={{ mr: 1 }} /> */}
+                      <ListItemText
+                        primary={item}
+                        secondary=""
+                        primaryTypographyProps={{
+                          sx: {
+                            fontSize: {
+                              md: "1rem;",
+                              sm: "0.9rem",
+                              xs: "0.6rem",
+                            },
+                          },
+                        }}
+                      />
+                    </ListItem>
+                  ))}
+              </List>
+            </Box>
+          </>
+        )}
 
         {retgistrationURL && (
           <a target="_blank" href={retgistrationURL} rel="noreferrer">

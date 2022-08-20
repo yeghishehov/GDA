@@ -2,38 +2,79 @@ import PartnerArarat from "../assets/images/PartnerArarat.png";
 import PartnerChip from "../assets/images/PartnerChip.png";
 import PartnerMtech from "../assets/images/PartnerMtech.png";
 import Partnernotebookcentre from "../assets/images/Partnernotebookcentre.png";
+import question from "../assets/images/question.png";
 
 export const ecosystems = [
   {
-    title: "Partner 1",
+    title: "Ararat tennis club",
     icon: PartnerArarat,
     contactInfor: {
       contacts: [],
-      webSite: "",
     },
+    webSite: "https://m.facebook.com/ararattennisclub/",
   },
+  // {
+  //   title: "CHIP Technologies",
+  //   icon: PartnerChip,
+  //   contactInfor: {
+  //     contacts: [],
+  //   },
+  //   webSite: "https://www.facebook.com/ChipTechnologies/",
+  // },
   {
-    title: "Partner 2",
-    icon: PartnerChip,
-    contactInfor: {
-      contacts: [],
-      webSite: "",
-    },
-  },
-  {
-    title: "Partner 3",
+    title: "Mtech",
     icon: PartnerMtech,
     contactInfor: {
       contacts: [],
-      webSite: "",
     },
+    webSite: "https://www.facebook.com/GamingByMtech/",
   },
   {
-    title: "Partner 3",
+    title: "Notebook Centre",
     icon: Partnernotebookcentre,
     contactInfor: {
       contacts: [],
-      webSite: "",
     },
+    webSite: "https://www.facebook.com/notebookcentre.am/",
+  },
+  {
+    title: "",
+    icon: question,
+    contactInfor: {
+      contacts: [],
+    },
+    webSite: "",
+  },
+  {
+    title: "",
+    icon: question,
+    contactInfor: {
+      contacts: [],
+    },
+    webSite: "",
+  },
+  {
+    title: "",
+    icon: question,
+    contactInfor: {
+      contacts: [],
+    },
+    webSite: "",
+  },
+  {
+    title: "",
+    icon: question,
+    contactInfor: {
+      contacts: [],
+    },
+    webSite: "",
+  },
+  {
+    title: "",
+    icon: question,
+    contactInfor: {
+      contacts: [],
+    },
+    webSite: "",
   },
 ];

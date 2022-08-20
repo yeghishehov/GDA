@@ -5,7 +5,10 @@ import { ecosystems } from "../data/Ecosystem.data";
 
 import { ContentSC, CoursesSC, ContainerSC } from "./mui";
 
-const coursesTitle = "Էկոհամակարգ";
+const title = "Էկոհամակարգ";
+
+const description =
+  "Էկոհամակարգ նոր խոսք գործընկերության մեջ Հայաստանում, ինչը թույլ է տալիս համախմբել մի քանի ոլորտներ, և ձևավորել մեկ կոմպլեքս համագործակցություն, որը ձեռնատու է առաջին հերթին հաճախորդին-ուսանողին:\nՄեծ հպարտությամբ ներկայացնում ենք մեր համախոհներին և գործընկերներին, ովքեր պատրաստ են մեր ուսանողներնորպես համակարգչային խաղերի ստեղծողներ տրամադրել արտոնյալ պայմաններ իրենց ծառայություններից օգտվելու դեպքում, որպեսզի խաղային ոլորտի զարգացումը ավելի դյուրին, հաճելի և արագ լինի: \nԱրտոնությունների և հատուկ զեղչերի համար հարկավոր է կապվել մեր գործընկերների հետ:";
 
 export function Ecosystems() {
   return (
@@ -25,16 +28,33 @@ export function Ecosystems() {
             },
           }}
         >
-          {coursesTitle}
+          {title}
+        </Typography>
+        <Typography component="p" fontFamily="Calibri">
+          {description}
         </Typography>
         <CoursesSC>
           {ecosystems.map((item) => (
-            <Card
-              logo={item.icon}
-              id={item.title}
-              title={item.title}
-              gradient="to right, #7b91db, #7a4eda"
-            />
+            <a
+              style={
+                !item.webSite
+                  ? {
+                      pointerEvents: "none",
+                      cursor: "default",
+                    }
+                  : {}
+              }
+              href={item.webSite}
+              target={!!item.webSite && "_blank"}
+              rel="noreferrer"
+            >
+              <Card
+                logo={item.icon}
+                id={item.title}
+                title={item.title}
+                gradient="to right, #7b91db, #7a4eda"
+              />
+            </a>
           ))}
         </CoursesSC>
       </ContainerSC>
