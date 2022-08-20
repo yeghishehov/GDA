@@ -22,9 +22,9 @@ import {
 
 const buttons = [
   { id: "courses", text: "Դասընթացներ" },
-  { id: "conditions", text: "Պայմաններ" },
   { id: "about", text: "Ինչ է Game Dev-ը" },
   { id: "our mission", text: "Մեր առաքելությունը" },
+  { id: "ecosystem", text: "էկոհամակարգ" },
   { id: "faq", text: "ՀՏՀ" },
   { id: "contacts", text: "Կոնտակտներ" },
 ];
@@ -53,12 +53,15 @@ export function Banner() {
   const [message, setMessage] = useState("");
   const fireworks = useRef(null);
 
-  useEffect(() => () => {
-    if (timeoutId) clearTimeout(timeoutId);
-    if (fireTimeoutId) clearTimeout(timeoutId);
-    if (mesTimeoutId) clearTimeout(mesTimeoutId);
-    if (finTimeoutId) clearTimeout(finTimeoutId);
-  }, []);
+  useEffect(
+    () => () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      if (fireTimeoutId) clearTimeout(timeoutId);
+      if (mesTimeoutId) clearTimeout(mesTimeoutId);
+      if (finTimeoutId) clearTimeout(finTimeoutId);
+    },
+    []
+  );
 
   useEffect(() => {
     fireworks.current = getFireworks();
@@ -130,6 +133,7 @@ export function Banner() {
 
   const smoothScroll = (e) => {
     const element = document.getElementById(e.target.name);
+    console.log(e.target.name, "< e.target.name");
     if (element) {
       const id = setTimeout(() => {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -154,7 +158,12 @@ export function Banner() {
 
   return (
     <ContentSC id="home" sx={{ cursor: score >= 0 ? "crosshair" : "default" }}>
-      <div onClick={clickHandler} onKeyDown={() => ({})} role="button" tabIndex="0">
+      <div
+        onClick={clickHandler}
+        onKeyDown={() => ({})}
+        role="button"
+        tabIndex="0"
+      >
         <FireworksContainer id="fireworks" />
         <ParticlesBackground />
         {score >= 0 && (
@@ -170,9 +179,7 @@ export function Banner() {
                 userSelect: "none",
               }}
             >
-              <div id="score">
-                {`score: ${score}`}
-              </div>
+              <div id="score">{`score: ${score}`}</div>
             </Box>
             <Box
               sx={{
@@ -255,9 +262,9 @@ function MobileDrawerWrapper({ smoothScroll, children }) {
 
   const toggleDrawer = (open) => (event) => {
     if (
-      event
-      && event.type === "keydown"
-      && (event.key === "Tab" || event.key === "Shift")
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
     ) {
       return;
     }
