@@ -1,6 +1,9 @@
 import UELogo from "../assets/images/UE_Logo1.png";
 import unityLogo from "../assets/images/unity.png";
 import question from "../assets/images/question.png";
+import MAX from "../assets/images/3dmax.png";
+import pngwing from "../assets/images/pngwing.png";
+import blender from "../assets/images/blender.png";
 
 export const courses = [
   {
@@ -30,7 +33,7 @@ export const courses = [
     title: "Concept Art",
     description:
       "Հենց այս մասնագետն է հանդես գալիս ապագա խաղի ընդհանուր վիզուալ հայեցակարգով, մանրամասն մշակում հերոսների կերպարներն ու խաղային միջավայրը։",
-    icon: question,
+    icon: pngwing,
     courseData: {
       course: [
         "Introduction to concept art",
@@ -50,10 +53,10 @@ export const courses = [
     },
   },
   {
-    title: "Asset Creation",
+    title: "3DS Max",
     description:
       "Սկսե՛ք ձեր 3D-արտիստի կարիերայի ուղին: Այս դասընթացը թույլ կտա ձեզ խորասուզվել ժամանակակից թվային արտադրության հսկայական աշխարհում:",
-    icon: question,
+    icon: MAX,
     courseData: {
       course: [
         "Autodesk 3Ds Max",
@@ -71,19 +74,23 @@ export const courses = [
     },
   },
   {
-    title: "Unity 3D",
-    commingSoon: true,
-    icon: unityLogo,
+    title: "Blender",
+    description:
+      "Սկսե՛ք ձեր 3D-արտիստի կարիերայի ուղին: Այս դասընթացը թույլ կտա ձեզ խորասուզվել ժամանակակից թվային արտադրության հսկայական աշխարհում:",
+    icon: blender,
     courseData: {
-      course: ["Շուտով"],
-      retgistrationURL: "",
-    },
-  },
-  {
-    title: "Շուտով",
-    icon: question,
-    courseData: {
-      course: [],
+      course: [
+        "Autodesk 3Ds Max",
+        "Modeling Objects & Character",
+        "Exterior & Interior",
+        "Texturing",
+        "Rigging",
+        "UV",
+        "Animation",
+        "Lightning",
+        "Rendering",
+        "And much more",
+      ],
       retgistrationURL: "",
     },
   },
