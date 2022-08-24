@@ -1,5 +1,5 @@
 import React from "react";
-import { hydrate, render } from "react-dom";
+import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
@@ -15,10 +15,6 @@ const IndexApp = (
 
 const rootElement = document.getElementById("root");
 
-if (rootElement.hasChildNodes()) {
-  hydrate(IndexApp, rootElement);
-} else {
-  render(IndexApp, rootElement);
-}
+render(IndexApp, rootElement);
 
 reportWebVitals();
