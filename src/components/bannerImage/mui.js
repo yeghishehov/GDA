@@ -143,7 +143,7 @@ const glitch5 = keyframes`
 `;
 
 export const BoxSC = styled(Box)`
-  position: relative;
+  /* position: relative;
   user-select: none;
   pointer-events: none;
   display: flex;
@@ -170,5 +170,10 @@ export const BoxSC = styled(Box)`
     &:nth-child(5) {
       animation: ${glitch5} 4s infinite steps(1, end);
     }
+  } */
+  user-select: none;
+  pointer-events: none;
+  & img {
+    width: 100%;
   }
 `;

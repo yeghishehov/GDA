@@ -34,8 +34,10 @@ export function Ecosystems() {
           {description}
         </Typography>
         <CoursesSC>
-          {ecosystems.map((item) => (
+          {ecosystems.map((item, index) => (
             <a
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
               style={
                 !item.webSite
                   ? {
@@ -45,7 +47,7 @@ export function Ecosystems() {
                   : {}
               }
               href={item.webSite}
-              target={!!item.webSite && "_blank"}
+              target={item.webSite ? "_blank" : undefined}
               rel="noreferrer"
             >
               <Card

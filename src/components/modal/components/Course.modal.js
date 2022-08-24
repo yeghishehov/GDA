@@ -1,5 +1,9 @@
 import React, { forwardRef, useState, useImperativeHandle } from "react";
-import Modal from "@mui/material/Modal";
+// import Modal from "@mui/material/Modal";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -8,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import dotImg from "../../../assets/images/dot.png";
 
-import { CourseModal, CourseIcon } from "../../../layout/mui";
+import { /* CourseModal, */ CourseIcon } from "../../../layout/mui";
 
 export default forwardRef(({ onClose }, ref) => {
   const [open, setOpen] = useState(false);
@@ -30,47 +34,58 @@ export default forwardRef(({ onClose }, ref) => {
 
   const handleClose = () => {
     setOpen(false);
-    onClose();
+    onClose?.();
   };
 
   return (
-    <Modal open={open} onClose={handleClose}>
-      <CourseModal>
-        <Typography
-          variant="h4"
-          component="h2"
-          fontFamily="Brutal-Regular,sans-serif"
-          sx={{
-            fontSize: {
-              md: "2rem",
-              sm: "1.7rem",
-              xs: "1.4rem",
-            },
-          }}
-        >
-          {title}
-        </Typography>
-
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      fullWidth
+      maxWidth="md"
+      sx={{
+        zIndex: 99999,
+        "& .MuiDialog-paper": {
+          background: "#f5f1f7"
+        }
+      }}
+    >
+      {/* <CourseModal> */}
+      <DialogTitle sx={{
+        fontSize: {
+          md: "2rem",
+          sm: "1.7rem",
+          xs: "1.4rem",
+        },
+        textAlign: "center"
+      }}
+      >
+        {title}
         {!!description && (
-          <Typography component="p" fontFamily="Calibri">
+          <Typography component="p" fontFamily="Calibri" align="center">
             {description}
           </Typography>
         )}
+      </DialogTitle>
+
+      <DialogContent dividers>
         {!!Object.keys(conditions || {}).length && (
           <>
             <Typography
               variant="h4"
               component="h4"
               fontFamily="Brutal-Regular,sans-serif"
+              align="center"
             >
               Պայմաններ
             </Typography>
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
               <List
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
+                  width: "90%",
                 }}
               >
                 {Object.keys(conditions || {}).map((key) => (
@@ -102,10 +117,11 @@ export default forwardRef(({ onClose }, ref) => {
               variant="h4"
               component="h4"
               fontFamily="Brutal-Regular,sans-serif"
+              align="center"
             >
               Lesson Components
             </Typography>
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", justifyContent: "center", margin: "auto" }}>
               <List
                 sx={{
                   display: "flex",
@@ -165,13 +181,23 @@ export default forwardRef(({ onClose }, ref) => {
             </Box>
           </>
         )}
+      </DialogContent>
+      {retgistrationURL && (
+        <DialogActions sx={{ justifyContent: "center" }}>
+          <Button
+            variant="outlined"
+            component="a"
+            href={retgistrationURL}
+            target="_blank"
+            rel="noreferrer"
+            sx={{ p: 1, pl: 3, pr: 3, fontSize: "0.9375rem", }}
+          >
+            Դիմել հիմա
+          </Button>
+        </DialogActions>
+      )}
 
-        {retgistrationURL && (
-          <a target="_blank" href={retgistrationURL} rel="noreferrer">
-            <Button>Դիմել հիմա</Button>
-          </a>
-        )}
-      </CourseModal>
-    </Modal>
+      {/* </CourseModal> */}
+    </Dialog>
   );
 });

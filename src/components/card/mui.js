@@ -91,6 +91,7 @@ export const BoxSC = styled(Box)`
   justify-content: space-around;
   position: absolute;
   bottom: 0;
+  padding: 0 10px; 
 `;
 
 export const CardHeaderSC = styled(Typography)`

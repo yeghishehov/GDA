@@ -132,19 +132,21 @@ export const Gradient3 = styled("div")`
 `;
 
 export const CourseModal = styled(Box)`
-  padding: 15px;
+  /* padding: 15px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 20px;
-  background: #f5f1f7;
+  border-radius: 20px; */
+  /* background: #f5f1f7; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   outline: none;
   min-width: 300px;
+  max-height: 75vh;
+  /* overflow: auto; */
 `;
 
 export const DividerContainerSC = styled("div")`

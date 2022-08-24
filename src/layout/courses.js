@@ -44,6 +44,7 @@ export function Courses() {
         <CoursesSC>
           {courses.map((item) => (
             <Card
+              key={item.title}
               logo={item.icon}
               id={item.title}
               title={item.title}
