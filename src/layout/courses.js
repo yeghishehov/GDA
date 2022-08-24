@@ -51,10 +51,10 @@ export function Courses() {
               gradient="to right, #7b91db, #7a4eda"
               onClick={() =>
                 !item.commingSoon &&
-                item.courseData.course.length &&
+                !item.disabled &&
                 handleOpen(item)
               }
-              disabled={!item.courseData.course.length}
+              disabled={item.disabled}
               content={item.commingSoon ? "Շուտով" : ""}
             />
           ))}

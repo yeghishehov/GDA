@@ -133,7 +133,7 @@ export function Banner() {
 
   const smoothScroll = (e) => {
     const element = document.getElementById(e.target.name);
-    console.log(e.target.name, "< e.target.name");
+
     if (element) {
       const id = setTimeout(() => {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
