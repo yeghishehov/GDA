@@ -30,7 +30,7 @@ export function Ecosystems() {
         >
           {title}
         </Typography>
-        <Typography component="p" fontFamily="Calibri">
+        <Typography component="p" fontFamily="Calibri" align="center">
           {description}
         </Typography>
         <CoursesSC>
@@ -43,8 +43,13 @@ export function Ecosystems() {
                   ? {
                       pointerEvents: "none",
                       cursor: "default",
+                      width: "fit-content",
+                      margin: 0,
                     }
-                  : {}
+                  : {
+                      width: "fit-content",
+                      margin: 0,
+                  }
               }
               href={item.webSite}
               target={item.webSite ? "_blank" : undefined}
