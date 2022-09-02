@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 import { Card } from "../components/card";
 import { ecosystems } from "../data/Ecosystem.data";
 
@@ -35,24 +36,19 @@ export function Ecosystems() {
         </Typography>
         <CoursesSC>
           {ecosystems.map((item, index) => (
-            <a
+            <Link
               // eslint-disable-next-line react/no-array-index-key
               key={index}
-              style={
-                !item.webSite
-                  ? {
-                      pointerEvents: "none",
-                      cursor: "default",
-                      width: "fit-content",
-                      margin: 0,
-                    }
-                  : {
-                      width: "fit-content",
-                      margin: 0,
-                  }
-              }
               href={item.webSite}
+              sx={item.webSite ? {
+                width: "45%",
+              } : {
+                pointerEvents: "none",
+                cursor: "default",
+                width: "45%",
+              }}
               target={item.webSite ? "_blank" : undefined}
+              underline="none"
               rel="noreferrer"
             >
               <Card
@@ -61,7 +57,7 @@ export function Ecosystems() {
                 title={item.title}
                 gradient="to right, #7b91db, #7a4eda"
               />
-            </a>
+            </Link>
           ))}
         </CoursesSC>
       </ContainerSC>
