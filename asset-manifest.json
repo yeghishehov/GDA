@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GDA/static/css/main.2f11eeed.css",
-    "main.js": "/GDA/static/js/main.99c569a6.js",
+    "main.js": "/GDA/static/js/main.4d2897b3.js",
     "static/js/108.e6adc0a9.chunk.js": "/GDA/static/js/108.e6adc0a9.chunk.js",
     "static/js/27.47e28bcc.chunk.js": "/GDA/static/js/27.47e28bcc.chunk.js",
     "static/media/AccessGrantedBG.png": "/GDA/static/media/AccessGrantedBG.c336875514354277be5c.png",
@@ -35,6 +35,6 @@
   },
   "entrypoints": [
     "static/css/main.2f11eeed.css",
-    "static/js/main.99c569a6.js"
+    "static/js/main.4d2897b3.js"
   ]
 }
