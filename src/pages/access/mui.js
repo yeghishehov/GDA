@@ -11,7 +11,7 @@ export const ImageBG = styled("div")`
 `;
 
 export const ImageAccessGranted = styled("div")`
-  postion: relative;
+  position: relative;
   width: 50vw;
   height: 50vh;
   background: url(${accessGranted}) no-repeat;

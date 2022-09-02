@@ -234,7 +234,7 @@ export function Banner() {
           sx={{ userSelect: "none" }}
         >
           {/* Enroll Now */}
-          Դիմել հիմա
+          Ընտրել դասընթացը
         </ButtonSC>
       </MobileDrawerWrapper>
 
@@ -298,7 +298,7 @@ function MobileDrawerWrapper({ smoothScroll, children }) {
             sx={{ userSelect: "none" }}
           >
             {/* Enroll Now */}
-            Դիմել հիմա
+            Ընտրել դասընթացը
           </ButtonSC>
           <MenuIcon
             color="primary"

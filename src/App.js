@@ -19,7 +19,7 @@ function App() {
       <Route path="/" element={<Layout />} />
       <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
       <Route path="/CHOOSEYOURDESTINation" element={<Contacts />} />
-      <Route path="/ACCESS" element={<Access />} />
+      <Route path="/EcosystemAccess" element={<Access />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

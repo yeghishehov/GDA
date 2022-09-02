@@ -2,7 +2,7 @@ import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import { ImageBG, Wrapper, ImageAccessGranted, PasswordField } from "./mui";
 
-const validPassword = "chaguchSimpson";
+const validPassword = "uuddlrlrBAStart";
 
 export function Access() {
   const [password, setPassword] = useState("");
