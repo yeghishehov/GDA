@@ -41,11 +41,11 @@ export function Ecosystems() {
               key={index}
               href={item.webSite}
               sx={item.webSite ? {
-                width: "45%",
+                width: { xs: "45%", md: "unset" },
               } : {
                 pointerEvents: "none",
                 cursor: "default",
-                width: "45%",
+                width: { xs: "45%", md: "unset" },
               }}
               target={item.webSite ? "_blank" : undefined}
               underline="none"
